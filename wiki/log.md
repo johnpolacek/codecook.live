@@ -12,3 +12,9 @@ Log bootstrap/import events, planning direction changes, codebase sync summaries
 - Git result: repository was not initialized when imported; Git was initialized during bootstrap.
 - Source briefs: generated `wiki/sources/prd.md`, `wiki/sources/technical-brief.md`, `wiki/sources/design-brief.md`, and `wiki/sources/marketing-brief.md`.
 - Unknowns: production deployment status, current Supabase project state, active product priorities, and whether legacy README dates are historical or manually maintained.
+
+## 2026-05-08 source | update product vision
+
+- Updated the product positioning from building projects in the open to turning commits into content.
+- Current vision: "CodeCook.live is your platform for turning your commits into content. Grow your audience while you ship."
+- Product implication: future planning should prioritize content generation, distribution, audience growth, and shipping cadence over broad community/social features.

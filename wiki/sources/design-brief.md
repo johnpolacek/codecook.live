@@ -21,7 +21,7 @@ CodeCook.live has a public landing page, profile and project pages, project impo
 ## Visual System
 
 - Existing UI uses Tailwind CSS, shadcn/Radix-style primitives, Geist/Rethink Sans typography, cards, dialogs, tabs, buttons, badges, avatars, tooltips, and toast notifications.
-- Current brand cues include the CodeCook.live name, blue accent color, bolt iconography, and live coding/publishing language.
+- Current brand cues include the CodeCook.live name, blue accent color, bolt iconography, and commit-to-content publishing language.
 - Future UI work should reuse existing primitives before introducing new component patterns.
 
 ## Interaction Patterns

@@ -9,7 +9,7 @@
 
 ## Positioning
 
-`CodeCook.live` positions itself as "The Publishing Platform for Live Coding." The landing copy emphasizes building projects in the open, turning commits into posts, and growing an audience while improving as a developer.
+`CodeCook.live` positions itself around turning commits into content. The landing copy emphasizes growing an audience while shipping, with commits as the raw material for public posts, updates, and shareable development stories.
 
 ## Public Entry
 
@@ -26,5 +26,5 @@ Current repository evidence suggests product proof should come from real project
 
 ## Messaging Constraints
 
-- Keep messaging tied to live coding, commits, projects, sessions, and public learning.
+- Keep messaging tied to commits, projects, shipping, content generation, and audience growth.
 - Avoid promising broad community or growth outcomes without evidence from usage data or launched examples.

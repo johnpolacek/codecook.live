@@ -4,7 +4,7 @@ This is the maintained project knowledge layer for `CodeCook.live`.
 
 ## Overview
 
-`CodeCook.live` is a Next.js web app for developers building in public. It lets users import projects from GitHub, create live coding sessions, compose session updates from commits, share progress publicly, and connect distribution channels such as Bluesky.
+`CodeCook.live` is a Next.js web app for developers turning commits into content. It lets users import projects from GitHub, create live coding sessions, compose session updates from commits, share progress publicly, and connect distribution channels such as Bluesky.
 
 ## Current Focus
 

@@ -9,7 +9,7 @@
 
 ## Product Intent
 
-`CodeCook.live` is a publishing platform for live coding. Its core promise is to turn development progress into public, shareable sessions so developers can build projects in the open while growing an audience.
+`CodeCook.live` is a publishing platform for turning commits into content. Its core promise is to help developers ship while converting their work into public, shareable updates that grow an audience.
 
 ## Audience
 
@@ -22,7 +22,7 @@ Primary users are developers who want to document their work, share commit-drive
 - Connect GitHub commit history and select commits or diffs as session context.
 - Create, edit, auto-save, archive, and publish live coding sessions.
 - Use AI help to generate session ideas or writing drafts from project and commit context.
-- Share project/session updates publicly and through Bluesky.
+- Share project/session updates publicly and through distribution channels such as Bluesky.
 - Enable or participate in guest chat on live sessions.
 
 ## Constraints
@@ -33,6 +33,6 @@ Primary users are developers who want to document their work, share commit-drive
 
 ## Non-Goals
 
-- Do not treat this as a generic blogging platform without commit/session context.
+- Do not treat this as a generic blogging platform without commit/content context.
 - Do not replace GitHub as the source of commit truth without a specific plan.
-- Do not add broad social-network features unless they support live coding sessions and public project progress.
+- Do not add broad social-network features unless they support content generation, distribution, audience growth, or public project progress.
