@@ -19,7 +19,18 @@ Fast-path exception: for small, local, reversible fixes that do not change produ
 
 ## Current Planning State
 
-No active implementation plan exists yet. Next planning target should be chosen from the current product priority, such as launch hardening, session publishing workflow, chat/realtime behavior, Bluesky distribution, or project import reliability.
+- Active plan: `maintenance/product-base-reset.md`
+- Planning shape: one active maintenance plan followed by focused feature plans
+- Current unit: Product Base Reset, Unit 01 - Product Surface Inventory
+- Next action: inventory existing routes/components/actions/schema/copy and classify each as keep, remove, rename, defer, or investigate
+- Blockers: none
+
+## Plan Sequence
+
+1. `maintenance/product-base-reset.md` - strip or reshape the existing app into a coherent commit-to-content/live-session base.
+2. `features/live-product-loop.md` - make `.live` mean active, observable, public shipping sessions.
+3. `features/commit-to-content-engine.md` - turn selected commits, diffs, and session context into editable content.
+4. `features/distribution-audience-loop.md` - help creators export, publish, and track generated content.
 
 Useful orientation commands:
 
@@ -27,4 +38,5 @@ Useful orientation commands:
 sed -n '1,220p' wiki/index.md
 sed -n '1,220p' wiki/roadmap.md
 sed -n '1,220p' wiki/Sources.md
+sed -n '1,140p' wiki/plans/maintenance/product-base-reset.md
 ```

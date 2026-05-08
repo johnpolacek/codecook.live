@@ -18,3 +18,10 @@ Log bootstrap/import events, planning direction changes, codebase sync summaries
 - Updated the product positioning from building projects in the open to turning commits into content.
 - Current vision: "CodeCook.live is your platform for turning your commits into content. Grow your audience while you ship."
 - Product implication: future planning should prioritize content generation, distribution, audience growth, and shipping cadence over broad community/social features.
+
+## 2026-05-08 planning | create commit-to-content roadmap plans
+
+- Created the first maintained plan sequence for the new product direction.
+- Active plan: `wiki/plans/maintenance/product-base-reset.md`.
+- Follow-up plans: `wiki/plans/features/live-product-loop.md`, `wiki/plans/features/commit-to-content-engine.md`, and `wiki/plans/features/distribution-audience-loop.md`.
+- Planning decision: web app remains the primary product; any Tauri app is deferred as a possible future local companion.
