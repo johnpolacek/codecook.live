@@ -4,8 +4,9 @@
 
 - Status: active
 - Shape: compact maintenance plan with short unit outline
-- Current unit: Unit 01 - Product Surface Inventory
-- Next action: inventory current routes, components, database tables, and copy against the new commit-to-content direction
+- Current unit: Unit 04 - Base Validation And Handoff
+- Next action: install dependencies or otherwise restore `node_modules`, then rerun `pnpm lint` and `pnpm build`
+- Blockers: `node_modules` is missing, so `next` is unavailable for local lint/build validation
 - Blockers: none
 - Validation: `pnpm lint`, `pnpm build`, route smoke checks, and manual review of removed/kept flows
 
@@ -58,6 +59,8 @@ The base product should center on:
 
 Create an inventory of routes, components, actions, API routes, database tables, and copy. Classify each as keep, remove, rename, defer, or investigate.
 
+Inventory artifact: `product-base-inventory.md`.
+
 #### Verification
 
 - Automated: none required beyond file inspection.
@@ -66,7 +69,7 @@ Create an inventory of routes, components, actions, API routes, database tables,
 
 #### Completion Gate
 
-Complete when the inventory gives one clear implementation checklist for a base cleanup pass.
+Complete. The inventory gives one clear implementation checklist for the initial base cleanup pass.
 
 ### Unit 02 - Copy And Navigation Reset
 
@@ -80,11 +83,16 @@ Update homepage, metadata, navigation, CTAs, feature copy, and public descriptio
 
 #### Completion Gate
 
-Complete when public copy consistently supports "turn commits into content" and no primary page leads with the old build-in-public framing.
+Complete. Public copy now supports "turn commits into content" and primary anonymous CTAs point to signup instead of waitlist.
 
 ### Unit 03 - Remove Or Hide Off-Direction Features
 
 Remove, hide, or defer surfaces identified in Unit 01 that distract from the commit-to-content/live-session loop.
+
+Initial removals:
+
+- Removed orphaned waitlist UI and server action files after landing/header CTAs moved to signup.
+- Preserved waitlist migration history and generated database types until a schema cleanup strategy is chosen.
 
 #### Verification
 
@@ -94,11 +102,18 @@ Remove, hide, or defer surfaces identified in Unit 01 that distract from the com
 
 #### Completion Gate
 
-Complete when the app has a smaller, coherent product surface and the remaining routes support the next feature plans.
+Complete for the initial reset pass. The app has a smaller product surface with primary waitlist UI removed, while database cleanup remains deferred.
 
 ### Unit 04 - Base Validation And Handoff
 
 Run baseline checks, record known issues, and update the wiki with the resulting base contract.
+
+Validation attempted:
+
+- `pnpm lint` failed because `node_modules` is missing and `next` is not available.
+- `pnpm build` failed because `node_modules` is missing and `next` is not available.
+
+Dependency installation is deferred because repo policy says to ask before installing dependencies.
 
 #### Verification
 

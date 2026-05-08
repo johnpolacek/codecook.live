@@ -21,9 +21,9 @@ Fast-path exception: for small, local, reversible fixes that do not change produ
 
 - Active plan: `maintenance/product-base-reset.md`
 - Planning shape: one active maintenance plan followed by focused feature plans
-- Current unit: Product Base Reset, Unit 01 - Product Surface Inventory
-- Next action: inventory existing routes/components/actions/schema/copy and classify each as keep, remove, rename, defer, or investigate
-- Blockers: none
+- Current unit: Product Base Reset, Unit 04 - Base Validation And Handoff
+- Next action: install dependencies or otherwise restore `node_modules`, then rerun `pnpm lint` and `pnpm build`
+- Blockers: `node_modules` is missing, so `next` is unavailable for local lint/build validation
 
 ## Plan Sequence
 
@@ -39,4 +39,5 @@ sed -n '1,220p' wiki/index.md
 sed -n '1,220p' wiki/roadmap.md
 sed -n '1,220p' wiki/Sources.md
 sed -n '1,140p' wiki/plans/maintenance/product-base-reset.md
+sed -n '1,160p' wiki/plans/maintenance/product-base-inventory.md
 ```

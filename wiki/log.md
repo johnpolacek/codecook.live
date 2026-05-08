@@ -25,3 +25,11 @@ Log bootstrap/import events, planning direction changes, codebase sync summaries
 - Active plan: `wiki/plans/maintenance/product-base-reset.md`.
 - Follow-up plans: `wiki/plans/features/live-product-loop.md`, `wiki/plans/features/commit-to-content-engine.md`, and `wiki/plans/features/distribution-audience-loop.md`.
 - Planning decision: web app remains the primary product; any Tauri app is deferred as a possible future local companion.
+
+## 2026-05-08 implementation | product base reset pass
+
+- Advanced `wiki/plans/maintenance/product-base-reset.md` through Unit 01 and Unit 02.
+- Recorded the product surface inventory in `wiki/plans/maintenance/product-base-inventory.md`.
+- Shifted landing/header/auth/share copy and anonymous CTAs toward the commit-to-content product base.
+- Removed orphaned waitlist UI/action files while preserving migration history and generated types until schema cleanup is explicitly planned.
+- Validation is blocked locally because `node_modules` is missing; `pnpm lint` and `pnpm build` both fail with `next: command not found`.

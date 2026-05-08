@@ -10,8 +10,8 @@ During `wiki/plans/maintenance/product-base-reset.md`, decide which existing sur
 
 ## Next Steps
 
-1. Execute Product Base Reset Unit 01: inventory current routes, components, actions, APIs, schema, and copy.
-2. Use the inventory to complete a copy/navigation reset and remove or hide off-direction features.
+1. Restore dependencies or approve dependency installation, then rerun Product Base Reset Unit 04 validation.
+2. Resolve any lint/build issues found after dependencies are available.
 3. Begin the live product loop once the base product surface is coherent.
 4. Build commit-to-content generation and distribution/audience loops after the live/session base is stable.
 
