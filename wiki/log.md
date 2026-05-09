@@ -89,3 +89,9 @@ Log bootstrap/import events, planning direction changes, codebase sync summaries
 - Removed confirmed leftovers from the previous incarnation: stale mock commit tooling, old message-time utility, old session screenshot, and empty legacy API/hooks/types/script directories.
 - Replaced the social preview screenshot with a current landing-page capture and changed package `go`/`ship` scripts so they verify locally without auto-pushing to `main`.
 - Validation passed: `pnpm lint`, `pnpm build`, stale-reference sweep, and screenshot inspection.
+
+## 2026-05-09 planning | add post-MVP AI writing style controls
+
+- Created `wiki/plans/features/ai-writing-style-controls.md` as a post-MVP feature plan.
+- Decision: style controls are account-level by default with `Clear builder voice`, preset dropdown, plain-language custom guidance, preview sample, and optional format/platform overrides.
+- MVP execution remains unchanged; this plan starts after MVP AI generation and copy/export are working.

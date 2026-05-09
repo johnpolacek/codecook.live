@@ -33,6 +33,7 @@ The MVP product surface should include profile onboarding, repository selection,
 - Loading, empty, error, and save states matter for editor trust because sessions are content-heavy and auto-save appears central.
 - External sharing flows should confirm success/failure and avoid losing draft state.
 - Product UI must never expose implementation status, provider names, roadmap mechanics, or work-in-progress planning. Placeholder UI should feel like real customer-facing product copy.
+- Post-MVP writing style settings should use customer-facing language such as "Writing Style," "Preset," "Custom guidance," and "Preview"; avoid "prompt," model/provider names, or implementation terms.
 
 ## Responsive And Accessibility Expectations
 

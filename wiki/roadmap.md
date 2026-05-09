@@ -18,6 +18,7 @@ Confirm provider credentials and local setup for Clerk, Convex, and GitHub OAuth
 
 ## Deferred
 
+- Post-MVP AI writing style controls: account-level primary style, presets, custom guidance, preview, and format/platform overrides.
 - Release planning until there is a concrete release workflow.
 - Repo-local `.agents/skills/project-wiki-maintainer/SKILL.md` until repo-local skills are explicitly requested or `.agents/skills/` is adopted in this repository.
 - Tauri or desktop companion work until the web product proves the core commit-to-content loop.

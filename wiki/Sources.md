@@ -6,6 +6,7 @@ This page catalogs source material, repository evidence, and unresolved unknowns
 
 - User request on 2026-05-08: initialize this project with `project-wiki`.
 - User clarification on 2026-05-09: treat the reset project as an MVP rebuild for solo developers building in public.
+- User clarification on 2026-05-09: post-MVP AI writing style controls should use a primary account-level style, preset dropdown, plain-language custom guidance, preview sample, and optional format/platform overrides.
 - Root `README.md`: current fresh-base status and development commands.
 - Repository evidence: Next.js landing shell, layout components, graphics, shadcn-style UI primitives, and wiki plans for the future product direction.
 
@@ -28,6 +29,7 @@ This page catalogs source material, repository evidence, and unresolved unknowns
 - `wiki/sources/marketing-brief.md`
 - `wiki/Architecture.md`
 - `wiki/plans/mvp/README.md`
+- `wiki/plans/features/ai-writing-style-controls.md`
 
 ## Unknowns
 

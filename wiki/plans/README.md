@@ -36,6 +36,10 @@ Fast-path exception: for small, local, reversible fixes that do not change produ
 
 The older feature plans remain as source context, but MVP execution should follow `mvp/` until the first release journey is complete.
 
+Post-MVP feature plans:
+
+- `features/ai-writing-style-controls.md` - account-level AI writing style settings, presets, preview, and format/platform overrides.
+
 Completed plans live under `zzz_completed/`.
 
 Useful orientation commands:
@@ -47,4 +51,5 @@ sed -n '1,220p' wiki/Sources.md
 sed -n '1,120p' wiki/plans/mvp/README.md
 sed -n '1,180p' wiki/plans/mvp/stage-01-foundation.md
 sed -n '1,180p' wiki/plans/mvp/units/stage-01/01-clerk-convex-foundation.md
+sed -n '1,180p' wiki/plans/features/ai-writing-style-controls.md
 ```
