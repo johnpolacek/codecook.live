@@ -25,9 +25,6 @@ export default function Features() {
       <div className="container mx-auto max-w-6xl">
         <div className="mx-auto mb-10 max-w-3xl text-center">
           <h2 className="text-3xl font-bold sm:text-4xl">A publishing workflow for people who ship.</h2>
-          <p className="mt-3 text-lg text-muted-foreground">
-            The product is centered on one loop: work in commits, narrate the work live, then turn the result into content.
-          </p>
         </div>
         <div className="grid gap-8 md:grid-cols-3">
           {features.map((feature, index) => (
