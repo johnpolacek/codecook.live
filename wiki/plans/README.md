@@ -10,10 +10,10 @@ Fast-path exception: for small, local, reversible fixes that do not change produ
 
 ## Structure
 
-- Use `features/` for focused feature plans that do not need a full numbered roadmap.
 - Use `maintenance/` for refactors, upgrades, cleanup, infrastructure, migrations, reliability, or tech debt.
 - Use `releases/` only if release planning becomes a maintained workflow.
 - Use `mvp/` for the current ordered MVP rebuild track.
+- Use `post-mvp/` for standalone future feature plans with their own stage(s) and units.
 - Use `zzz_completed/` for completed plans that should remain available as history without crowding active work.
 - Keep bugfix or cleanup planning in the closest relevant existing plan.
 - Record completed work, decisions discovered during implementation, and verification in `../log.md` only when they affect durable project context.
@@ -34,11 +34,11 @@ Fast-path exception: for small, local, reversible fixes that do not change produ
 3. `mvp/stage-03-ai-recap-and-public-publishing.md` - AI generation, editable recap, public page, copy/export.
 4. `mvp/stage-04-mvp-hardening.md` - UX polish, validation, privacy, launch readiness.
 
-The older feature plans remain as source context, but MVP execution should follow `mvp/` until the first release journey is complete.
+The old feature plan directory was removed. Work that belongs in the MVP now lives under `mvp/`; superseded historical plans live under `zzz_completed/features/`.
 
 Post-MVP feature plans:
 
-- `features/ai-writing-style-controls.md` - account-level AI writing style settings, presets, preview, and format/platform overrides.
+- `post-mvp/ai-writing-style-controls.md` - account-level AI writing style settings, presets, preview, and format/platform overrides.
 
 Completed plans live under `zzz_completed/`.
 
@@ -51,5 +51,5 @@ sed -n '1,220p' wiki/Sources.md
 sed -n '1,120p' wiki/plans/mvp/README.md
 sed -n '1,180p' wiki/plans/mvp/stage-01-foundation.md
 sed -n '1,180p' wiki/plans/mvp/units/stage-01/01-clerk-convex-foundation.md
-sed -n '1,180p' wiki/plans/features/ai-writing-style-controls.md
+sed -n '1,180p' wiki/plans/post-mvp/ai-writing-style-controls.md
 ```

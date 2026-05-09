@@ -2,8 +2,8 @@
 
 ## Summary
 
-- Status: deferred
-- Shape: compact feature plan retained as source context
+- Status: superseded
+- Shape: historical feature plan retained as source context
 - Current unit: none; superseded by `../mvp/stage-02-projects-and-live-sessions.md`
 - Next action: follow the MVP stage/unit plan
 - Blockers: MVP Stage 01 foundation

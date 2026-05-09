@@ -2,8 +2,8 @@
 
 ## Summary
 
-- Status: deferred
-- Shape: compact feature plan retained as source context
+- Status: superseded
+- Shape: historical feature plan retained as source context
 - Current unit: none; superseded by `../mvp/stage-03-ai-recap-and-public-publishing.md`
 - Next action: follow the MVP stage/unit plan
 - Blockers: MVP Stage 03 copy/export and public page
