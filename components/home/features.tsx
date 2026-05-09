@@ -1,29 +1,34 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { BoltIcon } from "@heroicons/react/24/solid"
-import { Code, Radio } from "lucide-react"
+import { Code, Radio, Share2 } from "lucide-react"
 
 const features = [
   {
     icon: <Code className="h-8 w-8 text-blue-500" />,
-    title: "Commit-To-Content",
-    description: "Turn selected commits, diffs, and notes into posts, recaps, and changelog-ready updates.",
+    title: "Commit-to-content",
+    description: "Use real commits, diffs, and notes as the source material for useful updates.",
   },
   {
     icon: <Radio className="h-8 w-8 text-blue-500" />,
-    title: "Live Shipping Sessions",
-    description: "Make active work followable with a public timeline of what changed and what ships next.",
+    title: "Live shipping sessions",
+    description: "Make active work followable with a public timeline of decisions, changes, and shipped moments.",
   },
   {
-    icon: <BoltIcon className="h-8 w-8 text-blue-500" />,
-    title: "Audience Growth",
-    description: "Package each session into shareable content so your progress compounds across channels.",
+    icon: <Share2 className="h-8 w-8 text-blue-500" />,
+    title: "Shareable recaps",
+    description: "Leave every session with posts, launch notes, and changelog copy ready to refine.",
   },
 ]
 
 export default function Features() {
   return (
-    <section id="product" className="pb-8 px-6">
+    <section id="product" className="px-6 pb-8">
       <div className="container mx-auto max-w-6xl">
+        <div className="mx-auto mb-10 max-w-3xl text-center">
+          <h2 className="text-3xl font-bold sm:text-4xl">A publishing workflow for people who ship.</h2>
+          <p className="mt-3 text-lg text-muted-foreground">
+            The product is centered on one loop: work in commits, narrate the work live, then turn the result into content.
+          </p>
+        </div>
         <div className="grid gap-8 md:grid-cols-3">
           {features.map((feature, index) => (
             <Card key={index}>

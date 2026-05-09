@@ -26,7 +26,7 @@ export default function Header() {
             <span className="sr-only">Toggle theme</span>
           </Button>
           <Button asChild>
-            <Link href="#product">Product</Link>
+            <Link href="#product">Product Loop</Link>
           </Button>
         </div>
       </div>

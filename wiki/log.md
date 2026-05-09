@@ -65,3 +65,8 @@ Log bootstrap/import events, planning direction changes, codebase sync summaries
 - Also removed old upload/S3 screenshot helpers, AI helper routes, session hooks, shared integration types, stale utilities, and dependencies tied to deleted surfaces.
 - Current runtime app is intentionally a landing shell plus layout, graphics, UI primitives, and local utilities.
 - Validation passed: `pnpm lint`, `pnpm build`, code reference sweep, and smoke checks for `/` plus removed auth/API/dynamic routes returning 404.
+
+## 2026-05-09 maintenance | prune historical plans
+
+- Removed completed maintenance plan files from `wiki/plans/maintenance/` so the wiki now emphasizes forward-looking product plans.
+- Updated the landing copy from transitional product-direction language to a clearer commit-to-content publishing loop.

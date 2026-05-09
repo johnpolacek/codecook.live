@@ -7,10 +7,12 @@ export default function CallToAction() {
   return (
     <section className="py-20 px-6 text-center">
       <div className="container mx-auto max-w-3xl">
-        <h2 className="text-5xl font-extrabold mb-4">Ready to Turn Commits Into Content?</h2>
-        <p className="text-xl text-muted-foreground mb-8 text-balance">Start a live shipping session, capture what changed, and leave with content ready to share.</p>
+        <h2 className="mb-4 text-4xl font-extrabold sm:text-5xl">The next foundation is the workspace.</h2>
+        <p className="mb-8 text-balance text-xl text-muted-foreground">
+          Clerk will own identity. Convex will own projects, sessions, realtime state, and the commit-to-content loop.
+        </p>
         <Button asChild size="lg" className="text-lg px-8">
-          <Link href="#product">Review the Product Direction</Link>
+          <Link href="#product">Review the Product Loop</Link>
         </Button>
       </div>
     </section>
