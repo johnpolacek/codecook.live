@@ -26,7 +26,7 @@ CodeCook.live has a public landing page, profile and project pages, project impo
 
 ## Interaction Patterns
 
-- Use dialogs for focused creation, waitlist, share, commit selection, and confirmation workflows.
+- Use dialogs for focused creation, share, commit selection, and confirmation workflows.
 - Use tabs, selectors, and sortable blocks where editor tasks require switching context without navigating away.
 - Loading, empty, error, and save states matter for editor trust because sessions are content-heavy and auto-save appears central.
 - External sharing flows should confirm success/failure and avoid losing draft state.

@@ -15,13 +15,13 @@
 
 - Browser UI lives under `app/`, `components/`, and `hooks/`.
 - Server actions live under `app/actions/`, `lib/actions/`, `lib/ai/actions.ts`, and `lib/ai/sessions/actions.ts`.
-- Route handlers live under `app/api/` for uploads, GitHub commit APIs, AI utilities, waitlist actions, session actions, and Bluesky endpoints.
+- Route handlers live under `app/api/` for uploads, GitHub commit APIs, AI utilities, session actions, and Bluesky endpoints.
 - Supabase client variants live in `lib/supabase/` for browser, server, middleware, and admin contexts.
 - Database evolution is tracked in `supabase/migrations/`.
 
 ## Data And Integration Surfaces
 
-- Supabase owns profiles, projects, sessions, commits, waitlist entries, Bluesky connection data, chat messages, and realtime/session state.
+- Supabase owns profiles, projects, sessions, commits, Bluesky connection data, chat messages, and realtime/session state.
 - GitHub import surfaces fetch repository commits and commit diffs, then support project and session content workflows.
 - AI-assisted session writing appears centered on prompts and actions under `lib/ai/`.
 - S3 and screenshot utilities support generated media for sharing or project/session visuals.

@@ -5,7 +5,7 @@
 - Last reviewed: 2026-05-08
 - Evidence basis: repository inspection
 - Confidence: medium
-- Known gaps: launch stage, audience channels, analytics, waitlist conversion data, screenshots, testimonials, and pricing are unknown.
+- Known gaps: launch stage, audience channels, analytics, screenshots, testimonials, and pricing are unknown.
 
 ## Positioning
 
@@ -13,11 +13,11 @@
 
 ## Public Entry
 
-The public entry surface is the landing page at `/`, with waitlist and authenticated dashboard paths. Public profile, project, and session routes suggest discovery and sharing are central to the product.
+The public entry surface is the landing page at `/`, with signup/signin and authenticated dashboard paths. Public profile, project, and session routes suggest discovery and sharing are central to the product.
 
 ## Primary CTA
 
-- Anonymous users: join the waitlist.
+- Anonymous users: sign up with GitHub.
 - Authenticated users: go to their dashboard/profile.
 
 ## Proof And Trust Signals

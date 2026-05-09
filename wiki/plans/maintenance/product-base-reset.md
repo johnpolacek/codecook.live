@@ -2,13 +2,12 @@
 
 ## Summary
 
-- Status: active
+- Status: complete
 - Shape: compact maintenance plan with short unit outline
-- Current unit: Unit 04 - Base Validation And Handoff
-- Next action: install dependencies or otherwise restore `node_modules`, then rerun `pnpm lint` and `pnpm build`
-- Blockers: `node_modules` is missing, so `next` is unavailable for local lint/build validation
+- Current unit: none
+- Next action: begin `../features/live-product-loop.md`
 - Blockers: none
-- Validation: `pnpm lint`, `pnpm build`, route smoke checks, and manual review of removed/kept flows
+- Validation: `pnpm lint`, `pnpm build`, public route smoke checks, and browser landing-page verification passed
 
 ## Intent
 
@@ -89,10 +88,11 @@ Complete. Public copy now supports "turn commits into content" and primary anony
 
 Remove, hide, or defer surfaces identified in Unit 01 that distract from the commit-to-content/live-session loop.
 
-Initial removals:
+Removals:
 
 - Removed orphaned waitlist UI and server action files after landing/header CTAs moved to signup.
-- Preserved waitlist migration history and generated database types until a schema cleanup strategy is chosen.
+- Added `supabase/migrations/20260509000000_drop_waitlist.sql` and removed the waitlist table from generated Supabase types.
+- Added a local-env guard so `/import` redirects to sign-in instead of throwing when Supabase public env vars are absent.
 
 #### Verification
 
@@ -102,18 +102,19 @@ Initial removals:
 
 #### Completion Gate
 
-Complete for the initial reset pass. The app has a smaller product surface with primary waitlist UI removed, while database cleanup remains deferred.
+Complete. The app has a smaller product surface with primary waitlist UI removed and an explicit waitlist schema cleanup migration.
 
 ### Unit 04 - Base Validation And Handoff
 
 Run baseline checks, record known issues, and update the wiki with the resulting base contract.
 
-Validation attempted:
+Validation completed:
 
-- `pnpm lint` failed because `node_modules` is missing and `next` is not available.
-- `pnpm build` failed because `node_modules` is missing and `next` is not available.
-
-Dependency installation is deferred because repo policy says to ask before installing dependencies.
+- `pnpm lint` passes.
+- `pnpm build` passes.
+- Public route smoke checks passed for `/`, `/signin`, `/signup`, `/welcome`, and `/import`.
+- Browser verification passed for the landing page after the Tailwind 4 source-loading fix.
+- External authenticated flows are deferred because local Supabase/GitHub credentials are not confirmed.
 
 #### Verification
 
@@ -123,4 +124,4 @@ Dependency installation is deferred because repo policy says to ask before insta
 
 #### Completion Gate
 
-Complete when future feature work can begin from a documented, validated base.
+Complete. Future feature work can begin from a documented, validated base.

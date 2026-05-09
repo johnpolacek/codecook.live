@@ -41,3 +41,11 @@ Log bootstrap/import events, planning direction changes, codebase sync summaries
 - Migrated linting from `next lint` to `eslint .`.
 - Validation passed: `pnpm lint`, `pnpm build`, and `agent-browser` local landing-page verification.
 - Noted compatibility constraint: ESLint remains on the latest compatible v9 line because Next/plugin peer ranges do not yet support ESLint 10.
+
+## 2026-05-09 maintenance | complete product base reset
+
+- Completed `wiki/plans/maintenance/product-base-reset.md`.
+- Removed remaining waitlist schema from generated Supabase types and added `supabase/migrations/20260509000000_drop_waitlist.sql`.
+- Added a local-env guard for `/import` so public smoke checks do not fail when Supabase public env vars are absent.
+- Updated roadmap and plan dashboard so the next active plan is `wiki/plans/features/live-product-loop.md`.
+- Validation passed: `pnpm lint`, `pnpm build`, public route smoke checks, and browser landing-page verification.

@@ -22,7 +22,7 @@
 
 ## Hide Or Defer
 
-- Waitlist-first entry should be removed from primary landing/header CTAs in favor of signup/signin.
+- Waitlist-first entry has been removed from primary landing/header CTAs in favor of signup/signin.
 - Generic community feedback claims should be removed until live audience mechanics are useful.
 - Chat should remain in code and schema for now, but product emphasis should defer it until the live page has a compelling timeline.
 - Database cleanup is deferred; preserve migrations and existing tables.
@@ -30,7 +30,7 @@
 ## Investigate
 
 - Confirm the authoritative generated Supabase type path between `lib/database.types.ts` and `lib/supabase/database.types.ts`.
-- Confirm production deployment and environment variable posture before removing waitlist backend/schema.
+- Waitlist backend/schema cleanup is complete in code via `20260509000000_drop_waitlist.sql`; confirm remote migration status before applying to production.
 - Confirm whether public signup is intended to be open in production.
 - Confirm whether `thread-*` component filenames should be renamed in a later mechanical cleanup.
 
@@ -39,4 +39,4 @@
 1. Replace primary waitlist CTAs with signup/dashboard CTAs.
 2. Update metadata and landing sections to "turn commits into content" and "grow your audience while you ship."
 3. Remove generic community feedback copy from the first-viewport product story.
-4. Leave chat, waitlist backend, and database migrations intact until a later cleanup has environment confidence.
+4. Leave chat intact until the live page has a compelling timeline.

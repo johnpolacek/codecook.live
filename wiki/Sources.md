@@ -11,10 +11,10 @@ This page catalogs source material, repository evidence, and unresolved unknowns
 ## Repository Evidence
 
 - `package.json` defines a private Next.js 15.1.3, React 19, TypeScript, Tailwind CSS, Supabase, AI SDK, OpenAI provider, Octokit, Bluesky, Puppeteer, S3, and Radix/shadcn UI app.
-- `app/` uses the Next.js App Router for the landing page, profile pages, project pages, session pages, auth callback, upload, GitHub commit APIs, AI utilities, waitlist, and Bluesky endpoints.
+- `app/` uses the Next.js App Router for the landing page, profile pages, project pages, session pages, auth callback, upload, GitHub commit APIs, AI utilities, and Bluesky endpoints.
 - `components/` contains home, auth, layout, project, session editor, session display, chat, and UI primitives.
 - `lib/` contains server actions, AI actions and prompts, Supabase clients/admin/server helpers, GitHub API, Bluesky client/formatting, S3 screenshot helpers, shared types, and utilities.
-- `supabase/migrations/` contains profiles, projects, sessions, commits, waitlist, Bluesky, live/archive status, and chat schema changes.
+- `supabase/migrations/` contains profiles, projects, sessions, commits, Bluesky, live/archive status, chat schema changes, and a cleanup migration that drops the removed waitlist table.
 - This folder had no `.git` directory at import time.
 
 ## Generated Source Briefs

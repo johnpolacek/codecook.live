@@ -2,18 +2,17 @@
 
 ## Current Goal
 
-Reset the existing CodeCook.live app into a coherent base for the new product direction: turn commits into content, make shipping sessions feel live, and help developers grow an audience while they ship.
+Build the live product loop on top of the reset CodeCook.live base: turn active shipping sessions into observable public stories.
 
 ## Next Decision
 
-During `wiki/plans/maintenance/product-base-reset.md`, decide which existing surfaces are core, which are renamed, which are hidden, and which are removed before new feature work begins.
+Define the authoritative live session state contract before changing public live-session behavior.
 
 ## Next Steps
 
-1. Restore dependencies or approve dependency installation, then rerun Product Base Reset Unit 04 validation.
-2. Resolve any lint/build issues found after dependencies are available.
-3. Begin the live product loop once the base product surface is coherent.
-4. Build commit-to-content generation and distribution/audience loops after the live/session base is stable.
+1. Execute Live Product Loop Unit 01: define session states, timestamps, and user-facing labels.
+2. Build the public live timeline once live state is coherent.
+3. Build commit-to-content generation and distribution/audience loops after the live/session base is stable.
 
 ## Deferred
 
@@ -21,3 +20,4 @@ During `wiki/plans/maintenance/product-base-reset.md`, decide which existing sur
 - Release planning until there is a concrete release workflow.
 - Repo-local `.agents/skills/project-wiki-maintainer/SKILL.md` until repo-local skills are explicitly requested or `.agents/skills/` is adopted in this repository.
 - Tauri or desktop companion work until the web product proves the core commit-to-content loop.
+- Product Base Reset is complete; waitlist UI/action/schema cleanup is represented by a drop migration, with remote Supabase application still requiring normal migration deployment.
