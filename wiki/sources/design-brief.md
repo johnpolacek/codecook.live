@@ -34,6 +34,7 @@ The MVP product surface should include profile onboarding, repository selection,
 - External sharing flows should confirm success/failure and avoid losing draft state.
 - Product UI must never expose implementation status, provider names, roadmap mechanics, or work-in-progress planning. Placeholder UI should feel like real customer-facing product copy.
 - Post-MVP writing style settings should use customer-facing language such as "Writing Style," "Preset," "Custom guidance," and "Preview"; avoid "prompt," model/provider names, or implementation terms.
+- Post-MVP shorts should emphasize useful developer lessons over self-promotion, keep source references reviewable, and support vertical video review before export.
 
 ## Responsive And Accessibility Expectations
 

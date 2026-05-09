@@ -7,6 +7,7 @@ This page catalogs source material, repository evidence, and unresolved unknowns
 - User request on 2026-05-08: initialize this project with `project-wiki`.
 - User clarification on 2026-05-09: treat the reset project as an MVP rebuild for solo developers building in public.
 - User clarification on 2026-05-09: post-MVP AI writing style controls should use a primary account-level style, preset dropdown, plain-language custom guidance, preview sample, and optional format/platform overrides.
+- User clarification on 2026-05-09: post-MVP automatic shorts should create useful developer-value videos for YouTube Shorts, TikTok, and X, with downloadable MP4s first and direct posting later.
 - Root `README.md`: current fresh-base status and development commands.
 - Repository evidence: Next.js landing shell, layout components, graphics, shadcn-style UI primitives, and wiki plans for the future product direction.
 
@@ -30,6 +31,7 @@ This page catalogs source material, repository evidence, and unresolved unknowns
 - `wiki/Architecture.md`
 - `wiki/plans/mvp/README.md`
 - `wiki/plans/post-mvp/ai-writing-style-controls.md`
+- `wiki/plans/post-mvp/automatic-developer-shorts.md`
 
 ## Unknowns
 

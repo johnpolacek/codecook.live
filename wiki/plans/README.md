@@ -39,6 +39,7 @@ The old feature plan directory was removed. Work that belongs in the MVP now liv
 Post-MVP feature plans:
 
 - `post-mvp/ai-writing-style-controls.md` - account-level AI writing style settings, presets, preview, and format/platform overrides.
+- `post-mvp/automatic-developer-shorts.md` - source-grounded developer shorts for YouTube Shorts, TikTok, and X.
 
 Completed plans live under `zzz_completed/`.
 
@@ -52,4 +53,5 @@ sed -n '1,120p' wiki/plans/mvp/README.md
 sed -n '1,180p' wiki/plans/mvp/stage-01-foundation.md
 sed -n '1,180p' wiki/plans/mvp/units/stage-01/01-clerk-convex-foundation.md
 sed -n '1,180p' wiki/plans/post-mvp/ai-writing-style-controls.md
+sed -n '1,180p' wiki/plans/post-mvp/automatic-developer-shorts.md
 ```

@@ -26,6 +26,7 @@ The MVP target user is a solo developer building in public.
 - Use AI help to generate editable writing drafts from project, commit, and session context.
 - Share project/session updates publicly and through distribution channels after the content review flow exists.
 - Post-MVP: configure AI writing style with account-level presets, custom guidance, preview, and optional format/platform overrides.
+- Post-MVP: generate source-grounded developer shorts for YouTube Shorts, TikTok, and X from session insights.
 
 ## MVP Acceptance
 
@@ -44,3 +45,4 @@ The MVP is complete when a solo developer can sign in with GitHub, create a prof
 - Do not add broad social-network features unless they support content generation, distribution, audience growth, or public project progress.
 - Do not include direct Bluesky or other external platform posting in MVP; copy/export plus public CodeCook page is the MVP distribution target.
 - Do not make writing style controls part of MVP; they are a first post-MVP enhancement after generation and copy/export work.
+- Do not make automatic shorts part of MVP; they follow AI writing style controls and start with downloadable MP4s before direct posting.

@@ -101,3 +101,10 @@ Log bootstrap/import events, planning direction changes, codebase sync summaries
 - Moved AI writing style controls to `wiki/plans/post-mvp/ai-writing-style-controls.md` because it remains a standalone post-MVP feature plan with its own stage and units.
 - Decision: style controls are account-level by default with `Clear builder voice`, preset dropdown, plain-language custom guidance, preview sample, and optional format/platform overrides.
 - MVP execution remains unchanged; this plan starts after MVP AI generation and copy/export are working.
+
+## 2026-05-09 planning | add post-MVP automatic developer shorts
+
+- Created `wiki/plans/post-mvp/automatic-developer-shorts.md` as a docs-only post-MVP feature plan.
+- Decision: shorts should be useful developer-value videos, not self-promotional recap ads.
+- First planned deliverable is source-grounded downloadable MP4s for YouTube Shorts, TikTok, and X; direct upload and automatic posting are deferred.
+- Renderer remains TBD and must be evaluated between Remotion, Hyperframe, or an adapter before implementation.
