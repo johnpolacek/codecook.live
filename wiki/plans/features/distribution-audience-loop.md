@@ -6,7 +6,7 @@
 - Shape: compact feature plan with short unit outline
 - Current unit: none; starts after the first commit-to-content output is useful
 - Next action: choose first-class distribution channels and tracking scope
-- Blockers: content format decisions, Bluesky integration posture, authenticated publishing policy
+- Blockers: content format decisions, authenticated publishing policy, channel priority
 - Validation: platform copy/export checks, share flow smoke checks, `pnpm lint`, `pnpm build`
 
 ## Intent
@@ -16,7 +16,7 @@ Help developers grow an audience while they ship by turning generated content in
 ## Scope
 
 - Make generated content easy to copy, export, or post.
-- Treat Bluesky as the existing first integration unless a different priority is chosen.
+- Choose the first direct publish integration after copy/export works; Bluesky is a candidate, not an existing active integration.
 - Track content drafts, share attempts, published links, and basic status.
 - Make public project/session pages the destination for shared posts.
 
@@ -57,19 +57,19 @@ Support reliable copy/export for generated content variants.
 
 Complete when a creator can leave CodeCook with polished content in the right format.
 
-### Unit 03 - Bluesky Publish Flow
+### Unit 03 - First Publish Flow
 
-Upgrade the existing Bluesky integration into the first direct publish path for generated content.
+Add the first direct publish path for generated content after the platform and credential model are chosen.
 
 #### Verification
 
 - Automated: `pnpm lint`, `pnpm build`.
-- Manual: publish or dry-run a Bluesky post/thread where credentials are available.
+- Manual: publish or dry-run a post/thread where credentials are available.
 - Deferred: production credential validation may require user-owned environment access.
 
 #### Completion Gate
 
-Complete when generated content can be reviewed and posted to Bluesky with clear success/failure state.
+Complete when generated content can be reviewed and posted to the chosen channel with clear success/failure state.
 
 ### Unit 04 - Audience Feedback Signals
 

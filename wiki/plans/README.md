@@ -39,6 +39,7 @@ sed -n '1,220p' wiki/index.md
 sed -n '1,220p' wiki/roadmap.md
 sed -n '1,220p' wiki/Sources.md
 sed -n '1,180p' wiki/plans/maintenance/next-and-dependency-upgrade.md
+sed -n '1,180p' wiki/plans/maintenance/remove-legacy-app-cruft.md
 sed -n '1,160p' wiki/plans/maintenance/remove-supabase-fresh-base.md
 sed -n '1,140p' wiki/plans/maintenance/product-base-reset.md
 sed -n '1,160p' wiki/plans/maintenance/product-base-inventory.md

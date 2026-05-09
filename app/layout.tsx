@@ -1,5 +1,5 @@
 import { Rethink_Sans } from "next/font/google"
-import { ThemeProvider } from "@/components/sessions/theme-provider"
+import { ThemeProvider } from "@/components/layout/theme-provider"
 import { Toaster } from "@/components/ui/sonner"
 import "./globals.css"
 

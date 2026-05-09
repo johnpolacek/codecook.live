@@ -14,9 +14,9 @@ export default function Hero() {
           CodeCook.live is your platform for turning your commits into content. Grow your audience while you ship.
         </p>
         <div className="mt-8">
-          <Link href="/signup">
+          <Link href="#product">
             <Button className="text-xl px-12 py-4 h-auto">
-              <BoltIcon className="h-5 w-5 mr-2 scale-[2] text-blue-500" /> Start Shipping <ChevronsRight className="h-5 w-5 ml-1" />
+              <BoltIcon className="h-5 w-5 mr-2 scale-[2] text-blue-500" /> See the Product <ChevronsRight className="h-5 w-5 ml-1" />
             </Button>
           </Link>
         </div>

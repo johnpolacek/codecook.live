@@ -2,8 +2,8 @@
 
 ## Status
 
-- Last reviewed: 2026-05-08
-- Evidence basis: repository inspection and README build log
+- Last reviewed: 2026-05-09
+- Evidence basis: repository inspection after fresh-base reset
 - Confidence: medium
 - Known gaps: current launch stage, active user feedback, pricing or access model, analytics, and production readiness are unknown.
 
@@ -13,23 +13,22 @@
 
 ## Audience
 
-Primary users are developers who want to document their work, share commit-driven progress, and present projects publicly. Secondary audiences include viewers who follow live sessions, comment or chat, and discover project progress.
+Primary users are developers who want to document their work, share commit-driven progress, and present projects publicly. Secondary audiences include viewers who follow live sessions and discover project progress.
 
 ## Primary Workflows
 
-- Sign up, create a profile, and manage user identity.
-- Import or create a coding project.
+- Sign up, create a profile, and manage user identity through Clerk.
+- Import or create a coding project backed by Convex.
 - Connect GitHub commit history and select commits or diffs as session context.
-- Create, edit, auto-save, archive, and publish live coding sessions.
-- Use AI help to generate session ideas or writing drafts from project and commit context.
-- Share project/session updates publicly and through distribution channels such as Bluesky.
-- Enable or participate in guest chat on live sessions.
+- Create, update, pause, ship, archive, and publicly view live shipping sessions.
+- Use AI help to generate editable writing drafts from project, commit, and session context.
+- Share project/session updates publicly and through distribution channels after the content review flow exists.
 
 ## Constraints
 
-- Project/session workflows depend on external services: Supabase, GitHub, OpenAI, S3-compatible storage, Puppeteer/Chromium, and Bluesky.
+- Project/session workflows will depend on external services: Clerk, Convex, GitHub, OpenAI or another AI provider, artifact storage, and optional publish channels.
 - Public sharing needs stable URLs, generated media, and clear session/project ownership.
-- Future behavior changes should preserve existing user/project/session data and Supabase migration history.
+- The old Supabase schema and legacy route/component code are intentionally not preserved.
 
 ## Non-Goals
 

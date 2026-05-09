@@ -20,4 +20,4 @@ Define the Clerk + Convex data/auth foundation.
 - Release planning until there is a concrete release workflow.
 - Repo-local `.agents/skills/project-wiki-maintainer/SKILL.md` until repo-local skills are explicitly requested or `.agents/skills/` is adopted in this repository.
 - Tauri or desktop companion work until the web product proves the core commit-to-content loop.
-- Product Base Reset is complete; Supabase schema, generated types, clients, package dependencies, and migrations are intentionally removed with no old data migration.
+- Product Base Reset is complete; Supabase schema, generated types, clients, package dependencies, migrations, legacy app routes, disabled placeholders, chat, Bluesky, GitHub proxy APIs, upload APIs, AI route helpers, and S3 screenshot utilities are intentionally removed with no old data migration.

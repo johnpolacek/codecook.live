@@ -16,8 +16,8 @@ Reset the project to a fresh no-database base before introducing Clerk, Convex, 
 ## Scope
 
 - Remove Supabase dependencies, scripts, generated types, client helpers, migrations, and auth callback route.
-- Replace old Supabase-backed pages/actions/components with placeholders or no-op states so the marketing shell and static routes remain usable.
-- Preserve S3 helpers, AI helpers, GitHub API utility surfaces, and UI components that can be reused by the future Convex-backed product.
+- Replace old Supabase-backed behavior with a clean no-database base so the marketing shell remains usable.
+- Preserve only UI components that can be reused by the future Convex-backed product.
 
 ## Non-Goals
 
@@ -32,7 +32,7 @@ Reset the project to a fresh no-database base before introducing Clerk, Convex, 
   - `pnpm build`
   - `rg "supabase|SUPABASE_|NEXT_PUBLIC_SUPABASE|@supabase"`
 - Manual:
-  - Confirm public landing/auth/static pages still render after Supabase removal.
+- Confirm the public landing page renders after Supabase removal.
 
 ## Completion Gate
 
@@ -41,5 +41,5 @@ This plan is complete when the repo has no code/package references to Supabase, 
 ## Completion Notes
 
 - Removed the Supabase package dependencies, DB scripts, clients, generated types, auth callback route, and `supabase/` migration/config tree.
-- Replaced old database-backed routes/actions/components with placeholder or disabled states until Clerk and Convex are configured.
-- Validation passed: `pnpm lint`, `pnpm build`, runtime code search for Supabase references, and curl smoke checks for `/`, `/signin`, `/signup`, `/welcome`, and a placeholder session route.
+- Follow-up cleanup removed the old placeholder/disabled route surfaces instead of keeping them.
+- Validation passed: `pnpm lint`, `pnpm build`, runtime code search for Supabase references, and curl smoke checks for public routes.

@@ -2,8 +2,8 @@
 
 ## Status
 
-- Last reviewed: 2026-05-08
-- Evidence basis: repository inspection
+- Last reviewed: 2026-05-09
+- Evidence basis: repository inspection after fresh-base reset
 - Confidence: medium
 - Known gaps: launch stage, audience channels, analytics, screenshots, testimonials, and pricing are unknown.
 
@@ -13,16 +13,16 @@
 
 ## Public Entry
 
-The public entry surface is the landing page at `/`, with signup/signin and authenticated dashboard paths. Public profile, project, and session routes suggest discovery and sharing are central to the product.
+The public entry surface is the landing page at `/`. Authenticated dashboard, profile, project, and session routes are not currently implemented after the fresh-base reset.
 
 ## Primary CTA
 
-- Anonymous users: sign up with GitHub.
-- Authenticated users: go to their dashboard/profile.
+- Current landing CTA: review the product direction on-page.
+- Future CTA: start with Clerk auth once the product workspace exists.
 
 ## Proof And Trust Signals
 
-Current repository evidence suggests product proof should come from real project pages, live sessions, commit diffs, Bluesky posts, and generated share media. No testimonials, case studies, metrics, or pricing evidence was found.
+Future product proof should come from real project pages, live sessions, commit diffs, generated content, and shareable public stories. No testimonials, case studies, metrics, or pricing evidence was found.
 
 ## Messaging Constraints
 

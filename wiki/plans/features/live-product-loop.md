@@ -4,9 +4,9 @@
 
 - Status: draft
 - Shape: compact feature plan with short unit outline
-- Current unit: none; starts after `../maintenance/product-base-reset.md` reaches a coherent base
-- Next action: confirm the public live session workflow after base reset inventory
-- Blockers: base reset decisions, realtime/Supabase environment confidence
+- Current unit: none; starts after Clerk and Convex foundation exists
+- Next action: define the live session data contract on Convex
+- Blockers: Clerk auth and Convex data/realtime foundation
 - Validation: live session route smoke checks, realtime/manual viewer checks, `pnpm lint`, `pnpm build`
 
 ## Intent
@@ -60,7 +60,7 @@ Make the public session page tell a live story from commits, notes, images, and 
 
 - Automated: `pnpm lint`, `pnpm build`.
 - Manual: inspect anonymous and owner views for a live session with multiple updates.
-- Deferred: realtime update checks may be deferred until local Supabase is running.
+- Deferred: realtime update checks may be deferred until Convex is configured.
 
 #### Completion Gate
 

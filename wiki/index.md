@@ -4,11 +4,11 @@ This is the maintained project knowledge layer for `CodeCook.live`.
 
 ## Overview
 
-`CodeCook.live` is a Next.js web app for developers turning commits into content. It lets users import projects from GitHub, create live coding sessions, compose session updates from commits, share progress publicly, and connect distribution channels such as Bluesky.
+`CodeCook.live` is a Next.js web app for developers turning commits into content. The current repo is a fresh public product shell; import, live session, generation, and distribution workflows will be rebuilt intentionally on Clerk and Convex.
 
 ## Current Focus
 
-Preserve the existing product and technical context, then use focused feature or maintenance plans for future changes. This import treats the project as an existing product rather than a greenfield MVP.
+Build from the stripped base toward Clerk auth, Convex data/realtime state, live shipping sessions, commit-to-content generation, and distribution/audience loops.
 
 ## Core Pages
 

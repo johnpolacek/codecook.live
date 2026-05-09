@@ -2,14 +2,14 @@
 
 ## Status
 
-- Last reviewed: 2026-05-08
-- Evidence basis: repository inspection
-- Confidence: medium
+- Last reviewed: 2026-05-09
+- Evidence basis: repository inspection after fresh-base reset
+- Confidence: high for current landing shell, medium for future workflow design
 - Known gaps: brand guidelines, production screenshots, target device analytics, accessibility audit status, and final launch polish expectations are unknown.
 
 ## Product Surface
 
-CodeCook.live has a public landing page, profile and project pages, project import/editing workflows, session viewing, live session pages, chat, and a session editor with commit selection, diff display, file references, block editing, image upload, AI assistance, and sharing controls.
+CodeCook.live currently has a public landing page, layout components, graphics, and reusable UI primitives. Profile, project, import, session, chat, AI, and sharing workflows were removed and should be redesigned around the new Clerk/Convex foundation.
 
 ## Interface Principles
 
@@ -20,14 +20,14 @@ CodeCook.live has a public landing page, profile and project pages, project impo
 
 ## Visual System
 
-- Existing UI uses Tailwind CSS, shadcn/Radix-style primitives, Geist/Rethink Sans typography, cards, dialogs, tabs, buttons, badges, avatars, tooltips, and toast notifications.
+- Existing UI uses Tailwind CSS, shadcn/Radix-style primitives, Rethink Sans typography, cards, buttons, badges, tooltips, and toast notifications.
 - Current brand cues include the CodeCook.live name, blue accent color, bolt iconography, and commit-to-content publishing language.
 - Future UI work should reuse existing primitives before introducing new component patterns.
 
 ## Interaction Patterns
 
-- Use dialogs for focused creation, share, commit selection, and confirmation workflows.
-- Use tabs, selectors, and sortable blocks where editor tasks require switching context without navigating away.
+- Use dialogs for focused creation, share, commit selection, and confirmation workflows when those workflows are reintroduced.
+- Use tabs and selectors where editor tasks require switching context without navigating away.
 - Loading, empty, error, and save states matter for editor trust because sessions are content-heavy and auto-save appears central.
 - External sharing flows should confirm success/failure and avoid losing draft state.
 
@@ -39,7 +39,7 @@ CodeCook.live has a public landing page, profile and project pages, project impo
 
 ## Validation
 
-- For meaningful UI changes, check desktop and mobile browser states for landing, auth, project import/edit, session editor, public session view, and live chat when relevant.
+- For meaningful UI changes, check desktop and mobile browser states for the landing page and any newly reintroduced auth, project, editor, or public session views.
 - Verify that text fits inside buttons/cards/dialogs and that interactive controls remain reachable with keyboard navigation.
 
 ## Unknowns

@@ -46,10 +46,4 @@ export default defineConfig([{
         "react-hooks/exhaustive-deps": 0,
         "react-hooks/set-state-in-effect": 0,
     },
-}, {
-    files: ["lib/supabase/database.types.ts"],
-
-    rules: {
-        "max-lines": "off",
-    },
 }]);

@@ -57,3 +57,11 @@ Log bootstrap/import events, planning direction changes, codebase sync summaries
 - Removed Supabase as the current data/auth provider; the intended next foundation is Clerk for auth and Convex for structured data/realtime.
 - Placeholder routes/actions are acceptable during the fresh-base reset because the next pass will rebuild the data-backed product surfaces.
 - Validation passed: `pnpm lint`, `pnpm build`, runtime code search for Supabase references, and curl smoke checks for key public routes.
+
+## 2026-05-09 maintenance | remove legacy app cruft
+
+- Created `wiki/plans/maintenance/remove-legacy-app-cruft.md`.
+- Removed the top legacy cruft categories: broken auth routes/components, placeholder profile/project/session routes, disabled old app actions, chat/community surface, Bluesky flows, and unauthenticated GitHub proxy routes.
+- Also removed old upload/S3 screenshot helpers, AI helper routes, session hooks, shared integration types, stale utilities, and dependencies tied to deleted surfaces.
+- Current runtime app is intentionally a landing shell plus layout, graphics, UI primitives, and local utilities.
+- Validation passed: `pnpm lint`, `pnpm build`, code reference sweep, and smoke checks for `/` plus removed auth/API/dynamic routes returning 404.
