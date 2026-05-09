@@ -30,8 +30,8 @@ This page catalogs source material, repository evidence, and unresolved unknowns
 - `wiki/sources/marketing-brief.md`
 - `wiki/Architecture.md`
 - `wiki/plans/mvp/README.md`
-- `wiki/plans/post-mvp/ai-writing-style-controls.md`
-- `wiki/plans/post-mvp/automatic-developer-shorts.md`
+- `wiki/plans/post-mvp/ai-writing-style-controls/README.md`
+- `wiki/plans/post-mvp/automatic-developer-shorts/README.md`
 
 ## Unknowns
 

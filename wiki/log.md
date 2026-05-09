@@ -92,19 +92,25 @@ Log bootstrap/import events, planning direction changes, codebase sync summaries
 
 ## 2026-05-09 planning | add post-MVP AI writing style controls
 
-- Created `wiki/plans/post-mvp/ai-writing-style-controls.md` as a post-MVP feature plan.
+- Created `wiki/plans/post-mvp/ai-writing-style-controls/` as a post-MVP feature plan with stage and unit files.
 
 ## 2026-05-09 planning | clean feature plans
 
 - Removed the active `wiki/plans/features/` directory.
 - Moved live product loop, commit-to-content engine, and distribution/audience loop plans to `wiki/plans/zzz_completed/features/` because their work is now represented in the MVP stages and units.
-- Moved AI writing style controls to `wiki/plans/post-mvp/ai-writing-style-controls.md` because it remains a standalone post-MVP feature plan with its own stage and units.
+- Moved AI writing style controls to `wiki/plans/post-mvp/ai-writing-style-controls/` because it remains a standalone post-MVP feature plan with its own stage and units.
 - Decision: style controls are account-level by default with `Clear builder voice`, preset dropdown, plain-language custom guidance, preview sample, and optional format/platform overrides.
 - MVP execution remains unchanged; this plan starts after MVP AI generation and copy/export are working.
 
 ## 2026-05-09 planning | add post-MVP automatic developer shorts
 
-- Created `wiki/plans/post-mvp/automatic-developer-shorts.md` as a docs-only post-MVP feature plan.
+- Created `wiki/plans/post-mvp/automatic-developer-shorts/` as a docs-only post-MVP feature plan with stage and unit files.
 - Decision: shorts should be useful developer-value videos, not self-promotional recap ads.
 - First planned deliverable is source-grounded downloadable MP4s for YouTube Shorts, TikTok, and X; direct upload and automatic posting are deferred.
 - Renderer remains TBD and must be evaluated between Remotion, Hyperframe, or an adapter before implementation.
+
+## 2026-05-09 planning | split post-MVP feature plans into directories
+
+- Replaced single-file post-MVP feature plans with directory-based plans that follow the project-wiki stage/unit convention.
+- `ai-writing-style-controls` now has a README, one stage file, and five unit files.
+- `automatic-developer-shorts` now has a README, four stage files, and thirteen unit files.
