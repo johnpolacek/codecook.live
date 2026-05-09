@@ -6,7 +6,6 @@ import ReactMarkdown from "react-markdown"
 import { Button } from "@/components/ui/button"
 import { Block, Session } from "@/lib/types/session"
 import { BoltIcon } from "@heroicons/react/24/solid"
-import { createClient } from "@/lib/supabase/client"
 import { useState } from "react"
 import { X, ChevronsRight, Share2 } from "lucide-react"
 import { LoadingAnimation } from "../ui/loading-animation"
@@ -46,8 +45,6 @@ export function SessionCard({ session, username, projectId, featured = false, cu
 
   const handleArchive = async () => {
     setIsArchiving(true)
-    const supabase = createClient()
-    await supabase.from("sessions").update({ is_archived: true }).eq("id", session.id)
     setIsArchiving(false)
   }
 

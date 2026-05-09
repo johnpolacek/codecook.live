@@ -4,7 +4,6 @@ import { CircleOff, MessageCircle } from "lucide-react"
 import { MessageItem } from "./message-item"
 import { MessageInput } from "./message-input"
 import { ChatMessage } from "@/lib/types/chat"
-import { createClient } from "@/lib/supabase/client"
 import { Badge } from "@/components/ui/badge"
 import { fetchChatMessages, sendChatMessage, sendGuestChatMessage, createGuestChatUser, getExistingGuestUser } from "@/lib/actions/chat"
 import { Button } from "@/components/ui/button"
@@ -60,34 +59,7 @@ export function BaseChat({ sessionId, currentUser, isEnabled }: BaseChatProps) {
 
     init()
 
-    // Use realtime subscription for all users
-    const supabase = createClient()
-    const channel = supabase
-      .channel(`chat-${sessionId}`)
-      .on(
-        "postgres_changes",
-        {
-          event: "INSERT",
-          schema: "public",
-          table: "chat_messages",
-          filter: `session_id=eq.${sessionId}`,
-        },
-        async (payload) => {
-          // Use server action to fetch the complete message with profile info
-          const { messages: newMessages } = await fetchChatMessages(sessionId)
-          if (newMessages) {
-            const newMessage = newMessages.find((msg) => msg.id === payload.new.id)
-            if (newMessage) {
-              setMessages((current) => [...current, newMessage])
-            }
-          }
-        }
-      )
-      .subscribe()
-
-    return () => {
-      supabase.removeChannel(channel)
-    }
+    return undefined
   }, [sessionId, currentUser])
 
   if (!mounted) return null

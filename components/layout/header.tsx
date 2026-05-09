@@ -7,24 +7,26 @@ import { Moon, Sun, ChevronDown } from "lucide-react"
 import LogoIcon from "../graphics/logo-icon"
 import { useEffect, useState } from "react"
 import { getAuthUser } from "@/lib/actions/auth"
-import type { User } from "@supabase/supabase-js"
 import type { Profile } from "@/lib/types/user"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { signOut } from "@/lib/actions/auth"
 
+interface AuthUser {
+  id: string
+  user_metadata: {
+    avatar_url?: string
+    name?: string
+  }
+}
+
 export default function Header() {
   const { theme, setTheme } = useTheme()
-  const [user, setUser] = useState<User | null>(null)
+  const [user, setUser] = useState<AuthUser | null>(null)
   const [profile, setProfile] = useState<Profile | null>(null)
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
-      setIsLoading(false)
-      return
-    }
-
     async function initAuth() {
       try {
         const { user, profile } = await getAuthUser()
@@ -74,8 +76,8 @@ export default function Header() {
                   <DropdownMenuTrigger asChild>
                     <Button variant="outline" className="relative h-auto rounded-full p-2 gap-0">
                       <Avatar className="h-7 w-7">
-                        <AvatarImage src={profile?.avatar_url || user.user_metadata.avatar_url} alt={profile?.name || user.user_metadata.name} />
-                        <AvatarFallback>{user.user_metadata.name[0]}</AvatarFallback>
+                        <AvatarImage src={profile?.avatar_url || user.user_metadata.avatar_url} alt={profile?.name || user.user_metadata.name || "User"} />
+                        <AvatarFallback>{(user.user_metadata.name || "U")[0]}</AvatarFallback>
                       </Avatar>
                       <ChevronDown className="ml-2 h-4 w-4" />
                     </Button>

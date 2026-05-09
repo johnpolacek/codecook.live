@@ -19,17 +19,18 @@ Fast-path exception: for small, local, reversible fixes that do not change produ
 
 ## Current Planning State
 
-- Active plan: `features/live-product-loop.md`
+- Active plan: none
 - Planning shape: one active maintenance plan followed by focused feature plans
-- Current unit: Live Product Loop, Unit 01 - Live State Contract
-- Next action: define the authoritative session states, timestamps, and user-facing labels for active, paused, shipped, and archived sessions
+- Current unit: none
+- Next action: create the Clerk auth and Convex data foundation plan
 - Blockers: none
 
 ## Plan Sequence
 
-1. `features/live-product-loop.md` - make `.live` mean active, observable, public shipping sessions.
-2. `features/commit-to-content-engine.md` - turn selected commits, diffs, and session context into editable content.
-3. `features/distribution-audience-loop.md` - help creators export, publish, and track generated content.
+1. Next planning target: Clerk auth and Convex data foundation.
+2. `features/live-product-loop.md` - make `.live` mean active, observable, public shipping sessions.
+3. `features/commit-to-content-engine.md` - turn selected commits, diffs, and session context into editable content.
+4. `features/distribution-audience-loop.md` - help creators export, publish, and track generated content.
 
 Useful orientation commands:
 
@@ -38,6 +39,7 @@ sed -n '1,220p' wiki/index.md
 sed -n '1,220p' wiki/roadmap.md
 sed -n '1,220p' wiki/Sources.md
 sed -n '1,180p' wiki/plans/maintenance/next-and-dependency-upgrade.md
+sed -n '1,160p' wiki/plans/maintenance/remove-supabase-fresh-base.md
 sed -n '1,140p' wiki/plans/maintenance/product-base-reset.md
 sed -n '1,160p' wiki/plans/maintenance/product-base-inventory.md
 sed -n '1,160p' wiki/plans/features/live-product-loop.md

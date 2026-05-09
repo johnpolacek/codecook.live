@@ -5,8 +5,6 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { createClient } from "@/lib/supabase/client"
-import { useRouter } from "next/navigation"
 import { toast } from "sonner"
 import { AvatarUpload } from "@/components/auth/avatar-upload"
 import Link from "next/link"
@@ -37,7 +35,6 @@ export function EditProfileForm({ profile }: EditProfileFormProps) {
   const [twitter, setTwitter] = useState(profile.twitter_username || "")
   const [links, setLinks] = useState<Link[]>(profile.links || [])
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const router = useRouter()
 
   const addLink = () => {
     setLinks([...links, { title: "", url: "" }])
@@ -67,29 +64,8 @@ export function EditProfileForm({ profile }: EditProfileFormProps) {
     e.preventDefault()
     setIsSubmitting(true)
 
-    try {
-      const supabase = createClient()
-      const { error } = await supabase
-        .from("profiles")
-        .update({
-          name,
-          bio,
-          avatar_url: avatarUrl,
-          twitter_username: twitter || null,
-          links: links.filter((link) => link.title && link.url), // Only save non-empty links
-        })
-        .eq("username", profile.username)
-
-      if (error) throw error
-
-      toast.success("Profile updated successfully")
-      router.push(`/${profile.username}`)
-      router.refresh()
-    } catch (error) {
-      console.error("Failed to update profile:", error)
-      toast.error("Failed to update profile")
-      setIsSubmitting(false)
-    }
+    toast.error("Profile editing is disabled until Clerk and Convex are configured.")
+    setIsSubmitting(false)
   }
 
   return (

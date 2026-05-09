@@ -6,7 +6,6 @@ import { getAuthUser } from "@/lib/actions/auth"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { ArrowLeftFromLine, ArrowRightFromLine } from "lucide-react"
-import { createClient } from "@/lib/supabase/client"
 import { LoadingAnimation } from "@/components/ui/loading-animation"
 
 interface ChatDrawerProps {
@@ -17,8 +16,8 @@ export function ChatDrawer({ sessionId }: ChatDrawerProps) {
   const [currentUser, setCurrentUser] = useState<{ id: string } | null>(null)
   const [isUserReady, setIsUserReady] = useState(false)
   const [isOpen, setIsOpen] = useState(true)
-  const [isChatEnabled, setIsChatEnabled] = useState(false)
-  const [isLive, setIsLive] = useState(false)
+  const [isChatEnabled] = useState(false)
+  const [isLive] = useState(false)
 
   useEffect(() => {
     const initUser = async () => {
@@ -30,43 +29,6 @@ export function ChatDrawer({ sessionId }: ChatDrawerProps) {
     }
 
     initUser()
-
-    // Get initial session status and subscribe to changes
-    const supabase = createClient()
-
-    const channel = supabase
-      .channel(`session-${sessionId}-status`)
-      .on(
-        "postgres_changes",
-        {
-          event: "UPDATE",
-          schema: "public",
-          table: "sessions",
-          filter: `id=eq.${sessionId}`,
-        },
-        (payload) => {
-          setIsChatEnabled(payload.new.chat_enabled)
-          setIsLive(payload.new.is_live)
-        }
-      )
-      .subscribe()
-
-    // Get initial status
-    supabase
-      .from("sessions")
-      .select("chat_enabled, is_live")
-      .eq("id", sessionId)
-      .single()
-      .then(({ data }) => {
-        if (data) {
-          setIsChatEnabled(data.chat_enabled)
-          setIsLive(data.is_live)
-        }
-      })
-
-    return () => {
-      supabase.removeChannel(channel)
-    }
   }, [sessionId])
 
   return (

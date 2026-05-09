@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button"
 import { SessionList } from "@/components/sessions/session-list"
 import { ProjectActions } from "./project-actions"
 import Header from "@/components/layout/header"
-import type { Session as SupabaseSession } from "@supabase/supabase-js"
 import type { Session, Block } from "@/lib/types/session"
 import { convertImageUrl } from "@/lib/utils"
 import { Project } from "@/lib/types/project"
@@ -25,7 +24,7 @@ interface ProjectViewProps {
   project: Project
   stats: ProjectStats | null
   sessions: Session[]
-  session: SupabaseSession | null
+  session: { user?: { id: string }; provider_token?: string } | null
   username: string
   projectId: string
 }

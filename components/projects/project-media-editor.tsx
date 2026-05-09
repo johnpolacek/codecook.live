@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { createClient } from "@/lib/supabase/client"
 import { toast } from "sonner"
 import { LoadingAnimation } from "../ui/loading-animation"
 import { ImagePlus, RefreshCw, X } from "lucide-react"
@@ -20,87 +19,28 @@ interface ProjectMediaEditorProps {
 }
 
 export function ProjectMediaEditor({ projectId, screenshotUrl: initialScreenshotUrl, logoUrl: initialLogoUrl, projectName, username, homepage }: ProjectMediaEditorProps) {
+  void projectId
+
   const [screenshotUrl, setScreenshotUrl] = useState(initialScreenshotUrl)
-  const [logoUrl, setLogoUrl] = useState(initialLogoUrl)
+  const [logoUrl] = useState(initialLogoUrl)
   const [isLoading, setIsLoading] = useState(false)
   const [isGeneratingScreenshot, setIsGeneratingScreenshot] = useState(false)
 
   const handleImageUpload = async (file: File, type: "screenshot" | "logo") => {
     if (!file) return
+    void type
 
     setIsLoading(true)
-    const supabase = createClient()
 
-    try {
-      // Upload image to storage
-      const fileExt = file.name.split(".").pop()
-      const fileName = `${type}-${Math.random()}.${fileExt}`
-      const filePath = `project-media/${projectId}/${fileName}`
-
-      const { error: uploadError } = await supabase.storage.from("public").upload(filePath, file)
-
-      if (uploadError) throw uploadError
-
-      // Get public URL
-      const {
-        data: { publicUrl },
-      } = supabase.storage.from("public").getPublicUrl(filePath)
-
-      // Update project
-      const { error: updateError } = await supabase
-        .from("projects")
-        .update({
-          [type === "screenshot" ? "screenshot_url" : "logo_url"]: publicUrl,
-        })
-        .eq("id", projectId)
-
-      if (updateError) throw updateError
-
-      // Update state
-      if (type === "screenshot") {
-        setScreenshotUrl(publicUrl)
-      } else {
-        setLogoUrl(publicUrl)
-      }
-
-      toast.success(`Project ${type} updated`)
-    } catch (error) {
-      console.error(`Failed to upload ${type}:`, error)
-      toast.error(`Failed to upload ${type}`)
-    } finally {
-      setIsLoading(false)
-    }
+    toast.error("Project media uploads are disabled until Clerk and Convex are configured.")
+    setIsLoading(false)
   }
 
   const handleRemoveImage = async (type: "screenshot" | "logo") => {
     setIsLoading(true)
-    const supabase = createClient()
 
-    try {
-      // Update project
-      const { error: updateError } = await supabase
-        .from("projects")
-        .update({
-          [type === "screenshot" ? "screenshot_url" : "logo_url"]: null,
-        })
-        .eq("id", projectId)
-
-      if (updateError) throw updateError
-
-      // Update state
-      if (type === "screenshot") {
-        setScreenshotUrl(null)
-      } else {
-        setLogoUrl(null)
-      }
-
-      toast.success(`Project ${type} removed`)
-    } catch (error) {
-      console.error(`Failed to remove ${type}:`, error)
-      toast.error(`Failed to remove ${type}`)
-    } finally {
-      setIsLoading(false)
-    }
+    toast.error(`Project ${type} removal is disabled until Clerk and Convex are configured.`)
+    setIsLoading(false)
   }
 
   return (
@@ -124,13 +64,8 @@ export function ProjectMediaEditor({ projectId, screenshotUrl: initialScreenshot
                       if (screenshotError) throw screenshotError
 
                       if (newScreenshotUrl) {
-                        const supabase = createClient()
-                        const { error: updateError } = await supabase.from("projects").update({ screenshot_url: newScreenshotUrl }).eq("id", projectId)
-
-                        if (updateError) throw updateError
-
                         setScreenshotUrl(newScreenshotUrl)
-                        toast.success("Screenshot generated successfully")
+                        toast.success("Screenshot generated locally; saving is disabled until Clerk and Convex are configured.")
                       }
                     } catch (error) {
                       console.error("Failed to generate screenshot:", error)

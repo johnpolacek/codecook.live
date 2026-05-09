@@ -1,4 +1,3 @@
-import { createClient } from "@/lib/supabase/server";
 import { NextRequest, NextResponse } from "next/server";
 
 interface GitHubFile {
@@ -24,15 +23,6 @@ export async function GET(
   request: NextRequest,
   context: { params: Promise<{ repo: string[] }> }
 ) {
-  const supabase = await createClient();
-  const {
-    data: { session },
-  } = await supabase.auth.getSession();
-
-  if (!session?.provider_token) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  }
-
   const { repo } = await context.params;
   const [owner, repository, action, ...rest] = repo;
   const fullName = `${owner}/${repository}`;
@@ -46,7 +36,6 @@ export async function GET(
     const apiUrl = `https://api.github.com/repos/${fullName}/commits?page=${page}&per_page=${per_page}`;
     const response = await fetch(apiUrl, {
       headers: {
-        Authorization: `Bearer ${session.provider_token}`,
         Accept: "application/vnd.github.v3+json",
       },
     });
@@ -63,7 +52,6 @@ export async function GET(
     // Get the latest commit
     const response = await fetch(`https://api.github.com/repos/${fullName}/commits`, {
       headers: {
-        Authorization: `Bearer ${session.provider_token}`,
         Accept: "application/vnd.github.v3+json",
       },
     });
@@ -84,7 +72,6 @@ export async function GET(
     const sha = rest[0];
     const response = await fetch(`https://api.github.com/repos/${fullName}/commits/${sha}`, {
       headers: {
-        Authorization: `Bearer ${session.provider_token}`,
         Accept: "application/vnd.github.v3+json",
       },
     });

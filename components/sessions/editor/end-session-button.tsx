@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { ChevronsLeft } from "lucide-react"
 import { PauseCircleIcon } from "@heroicons/react/24/solid"
-import { createClient } from "@/lib/supabase/client"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
 
@@ -12,13 +11,13 @@ interface EndSessionButtonProps {
 }
 
 export function EndSessionButton({ username, projectSlug, sessionId }: EndSessionButtonProps) {
+  void sessionId
+
   const router = useRouter()
   const [isEnding, setIsEnding] = useState(false)
 
   const handleEndSession = async () => {
     setIsEnding(true)
-    const supabase = createClient()
-    await supabase.from("sessions").update({ is_live: false }).eq("id", sessionId)
     router.push(`/${username}/${projectSlug}`)
   }
 

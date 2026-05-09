@@ -2,16 +2,16 @@
 
 ## Current Goal
 
-Build the live product loop on top of the reset CodeCook.live base: turn active shipping sessions into observable public stories.
+Introduce Clerk and Convex on top of the fresh no-database CodeCook.live base before rebuilding the live product loop.
 
 ## Next Decision
 
-Define the authoritative live session state contract before changing public live-session behavior.
+Define the Clerk + Convex data/auth foundation.
 
 ## Next Steps
 
-1. Execute Live Product Loop Unit 01: define session states, timestamps, and user-facing labels.
-2. Build the public live timeline once live state is coherent.
+1. Plan and implement Clerk auth plus Convex data/realtime foundation.
+2. Resume Live Product Loop Unit 01 once session state has an authoritative Convex model.
 3. Build commit-to-content generation and distribution/audience loops after the live/session base is stable.
 
 ## Deferred
@@ -20,4 +20,4 @@ Define the authoritative live session state contract before changing public live
 - Release planning until there is a concrete release workflow.
 - Repo-local `.agents/skills/project-wiki-maintainer/SKILL.md` until repo-local skills are explicitly requested or `.agents/skills/` is adopted in this repository.
 - Tauri or desktop companion work until the web product proves the core commit-to-content loop.
-- Product Base Reset is complete; waitlist UI/action/schema cleanup is represented by a drop migration, with remote Supabase application still requiring normal migration deployment.
+- Product Base Reset is complete; Supabase schema, generated types, clients, package dependencies, and migrations are intentionally removed with no old data migration.

@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label"
-import { createClient } from "@/lib/supabase/client"
 import { toast } from "sonner"
 
 interface ChatToggleProps {
@@ -9,24 +8,13 @@ interface ChatToggleProps {
   initialEnabled: boolean
 }
 
-export function ChatToggle({ sessionId, initialEnabled }: ChatToggleProps) {
-  const [isEnabled, setIsEnabled] = useState(initialEnabled)
+export function ChatToggle({ sessionId: _sessionId, initialEnabled }: ChatToggleProps) {
+  void _sessionId
+
+  const [isEnabled] = useState(initialEnabled)
 
   const handleToggle = async () => {
-    const supabase = createClient()
-    const newEnabled = !isEnabled
-
-    const { error } = await supabase.from("sessions").update({ chat_enabled: newEnabled }).eq("id", sessionId)
-
-    if (error) {
-      toast.error("Failed to toggle chat")
-      return
-    }
-
-    setIsEnabled(newEnabled)
-    if (!newEnabled) {
-      toast.success("Chat disabled")
-    }
+    toast.error("Chat toggles are disabled until Clerk and Convex are configured.")
   }
 
   return (

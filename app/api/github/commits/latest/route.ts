@@ -1,4 +1,3 @@
-import { createClient } from "@/lib/supabase/server"
 import { NextRequest } from "next/server"
 
 export async function GET(request: NextRequest) {
@@ -8,12 +7,6 @@ export async function GET(request: NextRequest) {
   
   if (!repo) {
     return new Response("Missing repo parameter", { status: 400 })
-  }
-
-  const supabase = await createClient()
-  const { data: { session } } = await supabase.auth.getSession()
-  if (!session?.provider_token) {
-    return new Response("Unauthorized", { status: 401 })
   }
 
   try {
@@ -26,7 +19,6 @@ export async function GET(request: NextRequest) {
     
     const response = await fetch(url, {
       headers: {
-        Authorization: `Bearer ${session.provider_token}`,
         Accept: "application/vnd.github.v3+json",
       },
     })
@@ -63,4 +55,4 @@ export async function GET(request: NextRequest) {
     console.error("Error fetching latest commit:", error)
     return new Response("Internal Server Error", { status: 500 })
   }
-} 
+}

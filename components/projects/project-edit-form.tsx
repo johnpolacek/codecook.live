@@ -5,8 +5,6 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { createClient } from "@/lib/supabase/client"
-import { useRouter } from "next/navigation"
 import { toast } from "sonner"
 import { LoadingAnimation } from "../ui/loading-animation"
 import Link from "next/link"
@@ -29,7 +27,6 @@ export function ProjectEditForm({ project, username }: ProjectEditFormProps) {
   const [description, setDescription] = useState(project.description || "")
   const [homepage, setHomepage] = useState(project.homepage || "")
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const router = useRouter()
 
   const handleNameChange = (value: string) => {
     const slug = toSlug(value)
@@ -48,22 +45,8 @@ export function ProjectEditForm({ project, username }: ProjectEditFormProps) {
         return
       }
 
-      const supabase = createClient()
-      const { error } = await supabase
-        .from("projects")
-        .update({
-          name,
-          display_name: displayName,
-          description: description || null,
-          homepage: homepage || null,
-        })
-        .eq("id", project.id)
-
-      if (error) throw error
-
-      toast.success("Project updated successfully")
-      router.push(`/${username}/${name}`)
-      router.refresh()
+      toast.error("Project editing is disabled until Clerk and Convex are configured.")
+      setIsSubmitting(false)
     } catch (error) {
       console.error("Failed to update project:", error)
       toast.error("Failed to update project")

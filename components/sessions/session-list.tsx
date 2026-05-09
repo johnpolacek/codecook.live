@@ -1,12 +1,11 @@
 import { SessionCard } from "./session-card"
 import type { Session } from "@/lib/types/session"
-import { User } from "@supabase/supabase-js"
 
 interface SessionListProps {
   sessions: Session[]
   username: string
   projectId: string
-  currentUser?: User | null
+  currentUser?: { id: string } | null
 }
 
 export function SessionList({ sessions, username, projectId, currentUser }: SessionListProps) {

@@ -49,3 +49,11 @@ Log bootstrap/import events, planning direction changes, codebase sync summaries
 - Added a local-env guard for `/import` so public smoke checks do not fail when Supabase public env vars are absent.
 - Updated roadmap and plan dashboard so the next active plan is `wiki/plans/features/live-product-loop.md`.
 - Validation passed: `pnpm lint`, `pnpm build`, public route smoke checks, and browser landing-page verification.
+
+## 2026-05-09 maintenance | remove Supabase fresh base
+
+- Created `wiki/plans/maintenance/remove-supabase-fresh-base.md`.
+- Decision: no old Supabase data is needed, and the old schema should not be migrated.
+- Removed Supabase as the current data/auth provider; the intended next foundation is Clerk for auth and Convex for structured data/realtime.
+- Placeholder routes/actions are acceptable during the fresh-base reset because the next pass will rebuild the data-backed product surfaces.
+- Validation passed: `pnpm lint`, `pnpm build`, runtime code search for Supabase references, and curl smoke checks for key public routes.
