@@ -1,7 +1,8 @@
 "use client"
 
 import Image from "next/image"
-import { Star, GitFork, Eye, GitCommit, Calendar, Github, ExternalLink, LinkIcon, Pencil, CornerUpLeft } from "lucide-react"
+import { Star, GitFork, Eye, GitCommit, Calendar, ExternalLink, LinkIcon, Pencil, CornerUpLeft } from "lucide-react"
+import { GitHubLogoIcon } from "@radix-ui/react-icons"
 import Link from "next/link"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { Button } from "@/components/ui/button"
@@ -72,7 +73,7 @@ export function ProjectView({ project, stats, sessions, session, username, proje
                   rel="noopener noreferrer"
                   className="inline-flex items-center space-x-2 font-mono text-xs bg-foreground/5 px-2 py-1 rounded-md hover:bg-foreground/10 transition-colors"
                 >
-                  <Github className="h-3 w-3" />
+                  <GitHubLogoIcon className="h-3 w-3" />
                   <span>{project.full_name}</span>
                   <ExternalLink className="h-3 w-3" />
                 </Link>

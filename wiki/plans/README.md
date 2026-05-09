@@ -22,12 +22,12 @@ Fast-path exception: for small, local, reversible fixes that do not change produ
 - Active plan: `maintenance/product-base-reset.md`
 - Planning shape: one active maintenance plan followed by focused feature plans
 - Current unit: Product Base Reset, Unit 04 - Base Validation And Handoff
-- Next action: install dependencies or otherwise restore `node_modules`, then rerun `pnpm lint` and `pnpm build`
-- Blockers: `node_modules` is missing, so `next` is unavailable for local lint/build validation
+- Next action: continue base validation now that dependencies are restored and upgraded
+- Blockers: none
 
 ## Plan Sequence
 
-1. `maintenance/product-base-reset.md` - strip or reshape the existing app into a coherent commit-to-content/live-session base.
+1. `maintenance/product-base-reset.md` - finish validation now that dependencies are restored and upgraded.
 2. `features/live-product-loop.md` - make `.live` mean active, observable, public shipping sessions.
 3. `features/commit-to-content-engine.md` - turn selected commits, diffs, and session context into editable content.
 4. `features/distribution-audience-loop.md` - help creators export, publish, and track generated content.
@@ -38,6 +38,7 @@ Useful orientation commands:
 sed -n '1,220p' wiki/index.md
 sed -n '1,220p' wiki/roadmap.md
 sed -n '1,220p' wiki/Sources.md
+sed -n '1,180p' wiki/plans/maintenance/next-and-dependency-upgrade.md
 sed -n '1,140p' wiki/plans/maintenance/product-base-reset.md
 sed -n '1,160p' wiki/plans/maintenance/product-base-inventory.md
 ```

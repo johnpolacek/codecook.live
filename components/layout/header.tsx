@@ -20,6 +20,11 @@ export default function Header() {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
+    if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+      setIsLoading(false)
+      return
+    }
+
     async function initAuth() {
       try {
         const { user, profile } = await getAuthUser()

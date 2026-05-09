@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Github } from "lucide-react"
+import { GitHubLogoIcon } from "@radix-ui/react-icons"
 import { signInWithGitHub } from "./actions"
 import { LoadingAnimation } from "../ui/loading-animation"
 import { useSearchParams } from "next/navigation"
@@ -56,7 +56,7 @@ export function UserSignIn() {
               }
             }}
           >
-            <Github className="mr-2 h-5 w-5" />
+            <GitHubLogoIcon className="mr-2 h-5 w-5" />
             Continue with GitHub
           </Button>
         )}

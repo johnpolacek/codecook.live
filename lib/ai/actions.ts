@@ -1,8 +1,8 @@
 'use server'
 
-import { CoreMessage, streamText } from 'ai'
+import { ModelMessage, streamText } from 'ai'
 import { openai } from '@ai-sdk/openai'
-import { createStreamableValue } from 'ai/rsc'
+import { createStreamableValue } from '@ai-sdk/rsc'
 import { streamObject } from 'ai'
 import { z } from 'zod'
 
@@ -35,7 +35,7 @@ export async function generate(input: string) {
   })
 }
 
-export async function generateFromMessages(messages: CoreMessage[], system?: string) {
+export async function generateFromMessages(messages: ModelMessage[], system?: string) {
   'use server'
   return createStreamingResponse({
     model: openai('gpt-4o'),

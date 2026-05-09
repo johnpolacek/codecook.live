@@ -33,3 +33,11 @@ Log bootstrap/import events, planning direction changes, codebase sync summaries
 - Shifted landing/header/auth/share copy and anonymous CTAs toward the commit-to-content product base.
 - Removed orphaned waitlist UI/action files while preserving migration history and generated types until schema cleanup is explicitly planned.
 - Validation is blocked locally because `node_modules` is missing; `pnpm lint` and `pnpm build` both fail with `next: command not found`.
+
+## 2026-05-09 maintenance | upgrade Next and dependencies
+
+- Completed `wiki/plans/maintenance/next-and-dependency-upgrade.md`.
+- Upgraded to Next.js 16.2.6, React 19.2.6, Tailwind CSS 4.3.0, AI SDK 6, and current dependency versions where compatible.
+- Migrated linting from `next lint` to `eslint .`.
+- Validation passed: `pnpm lint`, `pnpm build`, and `agent-browser` local landing-page verification.
+- Noted compatibility constraint: ESLint remains on the latest compatible v9 line because Next/plugin peer ranges do not yet support ESLint 10.

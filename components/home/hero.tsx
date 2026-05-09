@@ -11,6 +11,10 @@ export default function Hero() {
   const [profile, setProfile] = useState<{ username: string } | null>(null)
 
   useEffect(() => {
+    if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+      return
+    }
+
     const supabase = createClient()
     supabase.auth.getSession().then(async ({ data: { session } }) => {
       if (session?.user) {

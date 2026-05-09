@@ -12,9 +12,9 @@ export async function generateAndUploadScreenshot({ url, key }: GenerateScreensh
     // Launch browser
     const browser = await puppeteer.launch({
       args: chromium.args,
-      defaultViewport: chromium.defaultViewport,
+      defaultViewport: { width: 1280, height: 720 },
       executablePath: await chromium.executablePath(),
-      headless: chromium.headless,
+      headless: true,
     })
 
     // Create a new page

@@ -25,6 +25,7 @@ export async function POST(request: Request) {
     
     for (const [index, post] of posts.entries()) {
       const record: AppBskyFeedPost.Record = {
+        $type: "app.bsky.feed.post",
         text: post.text,
         createdAt: new Date().toISOString(),
         langs: ["en"],

@@ -1,6 +1,6 @@
 import { generate, generateFromMessages } from '@/lib/ai/actions';
-import { readStreamableValue } from 'ai/rsc';
-import { CoreMessage } from 'ai';
+import { readStreamableValue } from '@ai-sdk/rsc';
+import { ModelMessage } from 'ai';
 
 export async function getStreamingText(input: string, onUpdate: (output: string) => void) {
   try {
@@ -22,7 +22,7 @@ export async function getStreamingText(input: string, onUpdate: (output: string)
 }
 
 export async function getStreamingTextFromMessages(
-  messages: CoreMessage[],
+  messages: ModelMessage[],
   onUpdate: (output: string) => void,
   system?: string
 ) {

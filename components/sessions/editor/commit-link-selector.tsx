@@ -2,7 +2,8 @@ import * as React from "react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { FileChange } from "@/lib/types/session"
 import { Button } from "@/components/ui/button"
-import { Check, Github } from "lucide-react"
+import { Check } from "lucide-react"
+import { GitHubLogoIcon } from "@radix-ui/react-icons"
 import { cn } from "@/lib/utils"
 
 interface CommitLinkSelectorProps {
@@ -50,7 +51,7 @@ export function CommitLinkSelector({ open, onClose, files, existingLinks, onSele
                   onClick={() => !isExisting && handleSelect(file)}
                 >
                   <div className="flex items-center gap-2">
-                    <Github className="h-4 w-4" />
+                    <GitHubLogoIcon className="h-4 w-4" />
                     <span className="font-mono text-sm">{file.filename}</span>
                   </div>
                   {isExisting ? <span className="text-xs text-muted-foreground">Already linked</span> : isSelected ? <Check className="h-4 w-4" /> : null}

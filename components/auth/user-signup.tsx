@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Github } from "lucide-react"
+import { GitHubLogoIcon } from "@radix-ui/react-icons"
 import { signInWithGitHub } from "./actions"
 import { useState } from "react"
 import LogoIcon from "../graphics/logo-icon"
@@ -44,7 +44,7 @@ export function UserSignup() {
             }
           }}
         >
-          {!isLoading && <Github className="mr-2 h-5 w-5" />}
+          {!isLoading && <GitHubLogoIcon className="mr-2 h-5 w-5" />}
           {isLoading ? "Connecting to GitHub…" : "Continue with GitHub"}
         </Button>
       </CardContent>

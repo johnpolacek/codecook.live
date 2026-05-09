@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Github } from "lucide-react"
+import { GitHubLogoIcon } from "@radix-ui/react-icons"
 import { signInWithGitHub } from "@/components/auth/actions"
 
 export function GitHubAuthGate({ children }: { children?: React.ReactNode }) {
@@ -23,7 +23,7 @@ export function GitHubAuthGate({ children }: { children?: React.ReactNode }) {
         }}
         disabled={isLoading}
       >
-        <Github className="w-4 h-4 mr-2" />
+        <GitHubLogoIcon className="w-4 h-4 mr-2" />
         {isLoading ? "Connecting..." : "Connect GitHub"}
       </Button>
     </div>

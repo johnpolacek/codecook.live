@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { generateSessionIdeas } from "@/lib/ai/sessions/actions"
-import { readStreamableValue } from "ai/rsc"
+import { readStreamableValue } from "@ai-sdk/rsc"
 
 interface UseSessionIdeasResult {
   sessionIdeas: string[]

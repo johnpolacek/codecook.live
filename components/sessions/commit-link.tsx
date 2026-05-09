@@ -1,4 +1,5 @@
-import { Github, ExternalLink } from "lucide-react"
+import { ExternalLink } from "lucide-react"
+import { GitHubLogoIcon } from "@radix-ui/react-icons"
 
 interface CommitLinkProps {
   filename: string
@@ -14,7 +15,7 @@ export function CommitLink({ filename, sha, fullName }: CommitLinkProps) {
       rel="noopener noreferrer"
       className="inline-flex items-center gap-1.5 text-sm px-3 py-1 bg-muted hover:bg-muted/80 rounded-md font-mono"
     >
-      <Github className="h-3.5 w-3.5" />
+      <GitHubLogoIcon className="h-3.5 w-3.5" />
       <span>{filename}</span>
       <ExternalLink className="h-3 w-3" />
     </a>
