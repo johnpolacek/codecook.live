@@ -20,7 +20,7 @@ The MVP target user is a solo developer building in public.
 ## Primary Workflows
 
 - Sign up, create a profile, and manage user identity through Clerk.
-- Import or create a coding project backed by Convex.
+- Import or create a coding project backed by flat-file MVP data.
 - Connect GitHub commit history and select commits or diffs as session context.
 - Create, update, pause, ship, archive, and publicly view live shipping sessions.
 - Use AI help to generate editable writing drafts from project, commit, and session context.
@@ -34,7 +34,7 @@ The MVP is complete when a solo developer can sign in with GitHub, create a prof
 
 ## Constraints
 
-- Project/session workflows will depend on external services: Clerk, Convex, GitHub, OpenAI or another AI provider, artifact storage when needed, and optional publish channels after MVP.
+- Project/session workflows will depend on Clerk, flat-file app data, GitHub, OpenAI or another AI provider, S3-compatible artifact storage when needed, and optional publish channels after MVP.
 - Public sharing needs stable URLs, generated media, and clear session/project ownership.
 - The old Supabase schema and legacy route/component code are intentionally not preserved.
 

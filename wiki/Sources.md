@@ -37,4 +37,4 @@ This page catalogs source material, repository evidence, and unresolved unknowns
 
 - Whether the app is currently deployed at `codecook.live` and which hosting provider or environment variables are authoritative.
 - Active product priorities, known bugs, analytics, and launch-readiness criteria.
-- Clerk, Convex, authentication provider configuration, required OAuth scopes for GitHub, and production deployment details.
+- Clerk key configuration, S3-compatible storage credentials, required OAuth scopes for GitHub, and production deployment details.

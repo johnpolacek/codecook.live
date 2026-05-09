@@ -5,7 +5,7 @@
 - Status: completed
 - Completed: 2026-05-09
 - Result: Clerk SDK, provider wiring, protected-route middleware, public auth entry points, and env examples are in place.
-- Follow-up: execute `02-convex-app-foundation.md`.
+- Follow-up: execute `02-flat-file-and-s3-foundation.md`.
 - Blockers: manual sign-in and protected-route redirect verification require real Clerk keys.
 
 ## Goal
@@ -22,7 +22,7 @@ Install and configure Clerk as the authentication foundation.
 
 ## Non-Goals
 
-- Do not configure Convex in this unit.
+- Do not configure flat-file data or S3 storage in this unit.
 - Do not build full profile onboarding.
 - Do not fetch GitHub repositories yet.
 - Do not add AI generation yet.
@@ -30,7 +30,7 @@ Install and configure Clerk as the authentication foundation.
 ## Implementation Notes
 
 - Clerk owns auth.
-- UI copy must be customer-facing and must not mention Clerk, Convex, implementation status, or roadmap mechanics.
+- UI copy must be customer-facing and must not mention Clerk, storage mechanics, implementation status, or roadmap mechanics.
 
 ## Verification
 

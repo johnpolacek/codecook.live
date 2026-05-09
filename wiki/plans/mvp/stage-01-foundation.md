@@ -4,23 +4,23 @@
 
 - Status: draft
 - Shape: MVP stage
-- Current unit: Unit 02 - Convex App Foundation
-- Next action: implement Convex setup and provider wiring
-- Blockers: Convex project setup
-- Validation: `pnpm lint`, `pnpm build`, auth sign-in smoke checks, Convex function checks
+- Current unit: Unit 03 - User Profile Model
+- Next action: implement creator profile persistence on flat-file data helpers
+- Blockers: Clerk keys for full sign-in/profile workflow verification
+- Validation: `pnpm lint`, `pnpm build`, auth sign-in smoke checks, local data smoke checks, S3 config checks
 
 ## Goal
 
-Create the technical foundation for the MVP: GitHub-backed identity, durable app data, realtime-ready state, and an authenticated app shell that future units can build on.
+Create the technical foundation for the MVP: GitHub-backed identity, durable flat-file app data, immutable S3-compatible artifact storage, and an authenticated app shell that future units can build on.
 
 ## Completion Gate
 
-Stage 01 is complete when a user can sign in with GitHub, land in an authenticated app shell, have a Convex-backed user/profile record, and authorize the app to read repository and commit data needed by later stages.
+Stage 01 is complete when a user can sign in with GitHub, land in an authenticated app shell, have a flat-file-backed user/profile record, and authorize the app to read repository and commit data needed by later stages.
 
 ## Unit Sequence
 
 1. `units/stage-01/01-clerk-auth-foundation.md`
-2. `units/stage-01/02-convex-app-foundation.md`
+2. `units/stage-01/02-flat-file-and-s3-foundation.md`
 3. `units/stage-01/03-user-profile-model.md`
 4. `units/stage-01/04-github-oauth-repository-access.md`
 5. `units/stage-01/05-authenticated-app-shell.md`
@@ -28,7 +28,8 @@ Stage 01 is complete when a user can sign in with GitHub, land in an authenticat
 ## Key Decisions
 
 - Clerk owns authentication and GitHub OAuth.
-- Convex owns structured app data and realtime session state.
+- Flat-file JSON owns mutable MVP app data.
+- S3-compatible storage owns immutable artifacts such as screenshots, generated media, captions, and exports.
 - GitHub is the source of truth for repositories, commits, and diffs.
 - Product UI must not expose implementation status, stack choices, roadmap mechanics, or planning placeholders.
 

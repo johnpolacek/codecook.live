@@ -2,11 +2,11 @@
 
 ## Goal
 
-Create the Convex-backed creator profile foundation.
+Create the flat-file-backed creator profile foundation.
 
 ## Scope
 
-- Define user/profile tables or documents in Convex.
+- Define the user/profile record shape for flat-file JSON persistence.
 - Store Clerk user identity mapping.
 - Add profile onboarding for display name and username.
 - Reserve route-safe usernames.
@@ -29,7 +29,7 @@ Create the Convex-backed creator profile foundation.
 - Automated:
   - `pnpm lint`
   - `pnpm build`
-  - Convex validation/codegen checks.
+  - Flat-file data smoke checks.
 - Manual:
   - Sign in with a new user.
   - Complete profile setup.

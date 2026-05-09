@@ -6,8 +6,8 @@
 - Shape: MVP stage
 - Current unit: none
 - Next action: start after Stage 01 completion
-- Blockers: authenticated user/profile model, GitHub repository access, Convex schema foundation
-- Validation: `pnpm lint`, `pnpm build`, Convex checks, browser workflow checks for projects and sessions
+- Blockers: authenticated user/profile model, GitHub repository access, flat-file data foundation
+- Validation: `pnpm lint`, `pnpm build`, flat-file data checks, browser workflow checks for projects and sessions
 
 ## Goal
 

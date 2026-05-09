@@ -118,7 +118,20 @@ Log bootstrap/import events, planning direction changes, codebase sync summaries
 ## 2026-05-09 implementation | complete Clerk auth foundation
 
 - Completed `wiki/plans/mvp/units/stage-01/01-clerk-auth-foundation.md`.
-- Split the original combined Clerk/Convex foundation unit into separate Clerk and Convex units, then renumbered remaining Stage 01 units.
+- Split the original combined Clerk/Convex foundation unit into separate Clerk and data/storage units, then renumbered remaining Stage 01 units.
 - Added Clerk SDK/provider wiring, Next 16 `proxy.ts` protected-route middleware, a minimal `/app` protected route, header auth entry points, and Clerk env examples.
 - Updated repo automation policy so dependency installs are automatic.
 - Validation passed: `pnpm lint`, `pnpm build`, and public `/` smoke check. Protected `/app` redirect and signed-in route checks remain blocked until real Clerk keys are available locally.
+
+## 2026-05-09 architecture | switch MVP persistence to flat files and S3
+
+- User directed the MVP away from Convex.
+- New persistence decision: mutable MVP app data uses flat-file JSON; things that do not change after creation use S3-compatible artifact storage.
+- Updated MVP planning, architecture, source briefs, and active unit references accordingly.
+
+## 2026-05-09 implementation | complete flat-file and S3 foundation
+
+- Completed `wiki/plans/mvp/units/stage-01/02-flat-file-and-s3-foundation.md`.
+- Added flat-file JSON helpers with atomic writes, S3-compatible immutable storage helpers, env examples, `.data/` ignore rules, and `pnpm smoke:data`.
+- Validation passed: `pnpm smoke:data` and `pnpm check`.
+- Real S3 upload verification is deferred until bucket credentials exist.

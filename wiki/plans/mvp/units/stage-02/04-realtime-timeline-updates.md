@@ -9,7 +9,7 @@ Make live sessions observable through realtime manual updates.
 - Add timeline update model.
 - Let owners post manual session updates.
 - Render updates in session timeline order.
-- Use Convex realtime subscriptions for owner and public views.
+- Use lightweight polling or another flat-file-compatible refresh strategy for owner and public views.
 
 ## Non-Goals
 
@@ -22,7 +22,7 @@ Make live sessions observable through realtime manual updates.
 - Automated:
   - `pnpm lint`
   - `pnpm build`
-  - Convex validation/codegen checks.
+  - Flat-file data smoke checks.
 - Manual:
   - Open owner and public/session preview views.
   - Post an update.

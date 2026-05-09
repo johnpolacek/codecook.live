@@ -23,13 +23,13 @@ Fast-path exception: for small, local, reversible fixes that do not change produ
 - Active plan: `mvp/README.md`
 - Planning shape: multi-stage MVP
 - Current stage: Stage 01 - Identity And Data Foundation
-- Current unit: Stage 01 Unit 02 - Convex App Foundation
-- Next action: implement `mvp/units/stage-01/02-convex-app-foundation.md`
-- Blockers: Convex project setup
+- Current unit: Stage 01 Unit 03 - User Profile Model
+- Next action: implement `mvp/units/stage-01/03-user-profile-model.md`
+- Blockers: Clerk keys for full sign-in/profile workflow verification
 
 ## Plan Sequence
 
-1. `mvp/stage-01-foundation.md` - identity, Convex schema, GitHub OAuth, and app shell.
+1. `mvp/stage-01-foundation.md` - identity, flat-file data, S3 artifact storage, GitHub OAuth, and app shell.
 2. `mvp/stage-02-projects-and-live-sessions.md` - profiles, projects, live sessions, commit selection, realtime timeline.
 3. `mvp/stage-03-ai-recap-and-public-publishing.md` - AI generation, editable recap, public page, copy/export.
 4. `mvp/stage-04-mvp-hardening.md` - UX polish, validation, privacy, launch readiness.
@@ -51,7 +51,7 @@ sed -n '1,220p' wiki/roadmap.md
 sed -n '1,220p' wiki/Sources.md
 sed -n '1,120p' wiki/plans/mvp/README.md
 sed -n '1,180p' wiki/plans/mvp/stage-01-foundation.md
-sed -n '1,180p' wiki/plans/mvp/units/stage-01/02-convex-app-foundation.md
+sed -n '1,180p' wiki/plans/mvp/units/stage-01/03-user-profile-model.md
 sed -n '1,180p' wiki/plans/post-mvp/ai-writing-style-controls/README.md
 sed -n '1,180p' wiki/plans/post-mvp/automatic-developer-shorts/README.md
 ```

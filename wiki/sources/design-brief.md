@@ -9,7 +9,7 @@
 
 ## Product Surface
 
-CodeCook.live currently has a public landing page, layout components, graphics, and reusable UI primitives. Profile, project, import, session, chat, AI, and sharing workflows were removed and should be redesigned around the new Clerk/Convex foundation.
+CodeCook.live currently has a public landing page, layout components, graphics, and reusable UI primitives. Profile, project, import, session, chat, AI, and sharing workflows were removed and should be redesigned around the new Clerk, flat-file data, and S3 artifact foundation.
 
 The MVP product surface should include profile onboarding, repository selection, project creation, live session controls, commit selection, timeline updates, AI recap editing, copy/export, and public session pages.
 

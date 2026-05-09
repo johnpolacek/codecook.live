@@ -9,9 +9,11 @@
     "go": "pnpm check && git status --short",
     "ship": "pnpm go",
     "lint": "eslint .",
-    "check": "pnpm lint && pnpm build"
+    "check": "pnpm lint && pnpm build",
+    "smoke:data": "tsx scripts/smoke-flat-file-db.mjs"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.1045.0",
     "@clerk/nextjs": "^7.3.3",
     "@heroicons/react": "^2.2.0",
     "@radix-ui/react-alert-dialog": "^1.1.15",

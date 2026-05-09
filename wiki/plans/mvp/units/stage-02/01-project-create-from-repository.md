@@ -7,7 +7,7 @@ Let a creator create a CodeCook project from a GitHub repository.
 ## Scope
 
 - Select a GitHub repository.
-- Create a Convex project record.
+- Create a flat-file project record.
 - Store repository identity, owner, name, visibility, default branch, and public project slug.
 - Show a project detail page for the creator.
 
@@ -21,7 +21,7 @@ Let a creator create a CodeCook project from a GitHub repository.
 - Automated:
   - `pnpm lint`
   - `pnpm build`
-  - Convex validation/codegen checks.
+  - Flat-file data smoke checks.
 - Manual:
   - Select a repository and create a project.
   - Confirm duplicate project handling.

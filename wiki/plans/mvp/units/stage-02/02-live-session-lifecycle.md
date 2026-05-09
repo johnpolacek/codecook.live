@@ -21,7 +21,7 @@ Add the core session lifecycle for active shipping work.
 - Automated:
   - `pnpm lint`
   - `pnpm build`
-  - Convex validation/codegen checks.
+  - Flat-file data smoke checks.
 - Manual:
   - Start, pause, resume, ship, and archive a session.
   - Confirm invalid state transitions are blocked.

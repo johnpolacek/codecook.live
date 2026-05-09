@@ -6,11 +6,11 @@ Build the CodeCook.live MVP for solo developers building in public.
 
 ## Next Decision
 
-Confirm provider credentials and local setup for Clerk, Convex, and GitHub OAuth.
+Confirm provider credentials and local setup for Clerk, S3-compatible artifact storage, and GitHub OAuth.
 
 ## Next Steps
 
-1. Execute `wiki/plans/mvp/units/stage-01/02-convex-app-foundation.md`.
+1. Execute `wiki/plans/mvp/units/stage-01/03-user-profile-model.md`.
 2. Complete Stage 01 identity, data, GitHub OAuth, and app shell foundation.
 3. Build Stage 02 projects, live sessions, commit selection, realtime timeline, and automatic commit polling.
 4. Build Stage 03 AI recap generation, public session page, and copy/export.
