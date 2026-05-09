@@ -2,11 +2,11 @@
 
 ## Summary
 
-- Status: draft
-- Shape: compact feature plan with short unit outline
-- Current unit: none; starts after product base reset clarifies kept editor and AI surfaces
-- Next action: define the first content formats and input contract
-- Blockers: base reset decisions, AI prompt ownership, platform output priorities
+- Status: deferred
+- Shape: compact feature plan retained as source context
+- Current unit: none; superseded by `../mvp/stage-03-ai-recap-and-public-publishing.md`
+- Next action: follow the MVP stage/unit plan
+- Blockers: MVP Stage 02 project/session/commit context
 - Validation: generation prompt tests or fixtures where possible, manual content review, `pnpm lint`, `pnpm build`
 
 ## Intent

@@ -5,6 +5,7 @@ This page catalogs source material, repository evidence, and unresolved unknowns
 ## Source Material
 
 - User request on 2026-05-08: initialize this project with `project-wiki`.
+- User clarification on 2026-05-09: treat the reset project as an MVP rebuild for solo developers building in public.
 - Root `README.md`: current fresh-base status and development commands.
 - Repository evidence: Next.js landing shell, layout components, graphics, shadcn-style UI primitives, and wiki plans for the future product direction.
 
@@ -25,9 +26,10 @@ This page catalogs source material, repository evidence, and unresolved unknowns
 - `wiki/sources/design-brief.md`
 - `wiki/sources/marketing-brief.md`
 - `wiki/Architecture.md`
+- `wiki/plans/mvp/README.md`
 
 ## Unknowns
 
 - Whether the app is currently deployed at `codecook.live` and which hosting provider or environment variables are authoritative.
 - Active product priorities, known bugs, analytics, and launch-readiness criteria.
-- Clerk, Convex, authentication provider configuration, and required OAuth scopes for GitHub and Bluesky in production.
+- Clerk, Convex, authentication provider configuration, required OAuth scopes for GitHub, and production deployment details.

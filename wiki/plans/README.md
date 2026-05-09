@@ -13,24 +13,27 @@ Fast-path exception: for small, local, reversible fixes that do not change produ
 - Use `features/` for focused feature plans that do not need a full numbered roadmap.
 - Use `maintenance/` for refactors, upgrades, cleanup, infrastructure, migrations, reliability, or tech debt.
 - Use `releases/` only if release planning becomes a maintained workflow.
-- Use `mvp/` only if the user explicitly reframes this existing app as an MVP track with ordered implementation sessions.
+- Use `mvp/` for the current ordered MVP rebuild track.
 - Keep bugfix or cleanup planning in the closest relevant existing plan.
 - Record completed work, decisions discovered during implementation, and verification in `../log.md` only when they affect durable project context.
 
 ## Current Planning State
 
-- Active plan: none
-- Planning shape: one active maintenance plan followed by focused feature plans
-- Current unit: none
-- Next action: create the Clerk auth and Convex data foundation plan
-- Blockers: none
+- Active plan: `mvp/README.md`
+- Planning shape: multi-stage MVP
+- Current stage: Stage 01 - Identity And Data Foundation
+- Current unit: Stage 01 Unit 01 - Clerk And Convex App Foundation
+- Next action: implement `mvp/units/stage-01/01-clerk-convex-foundation.md`
+- Blockers: Clerk application keys, Convex project setup, GitHub OAuth app credentials
 
 ## Plan Sequence
 
-1. Next planning target: Clerk auth and Convex data foundation.
-2. `features/live-product-loop.md` - make `.live` mean active, observable, public shipping sessions.
-3. `features/commit-to-content-engine.md` - turn selected commits, diffs, and session context into editable content.
-4. `features/distribution-audience-loop.md` - help creators export, publish, and track generated content.
+1. `mvp/stage-01-foundation.md` - identity, Convex schema, GitHub OAuth, and app shell.
+2. `mvp/stage-02-projects-and-live-sessions.md` - profiles, projects, live sessions, commit selection, realtime timeline.
+3. `mvp/stage-03-ai-recap-and-public-publishing.md` - AI generation, editable recap, public page, copy/export.
+4. `mvp/stage-04-mvp-hardening.md` - UX polish, validation, privacy, launch readiness.
+
+The older feature plans remain as source context, but MVP execution should follow `mvp/` until the first release journey is complete.
 
 Useful orientation commands:
 
@@ -38,5 +41,7 @@ Useful orientation commands:
 sed -n '1,220p' wiki/index.md
 sed -n '1,220p' wiki/roadmap.md
 sed -n '1,220p' wiki/Sources.md
-sed -n '1,160p' wiki/plans/features/live-product-loop.md
+sed -n '1,120p' wiki/plans/mvp/README.md
+sed -n '1,180p' wiki/plans/mvp/stage-01-foundation.md
+sed -n '1,180p' wiki/plans/mvp/units/stage-01/01-clerk-convex-foundation.md
 ```

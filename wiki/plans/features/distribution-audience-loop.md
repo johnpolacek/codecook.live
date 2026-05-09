@@ -2,11 +2,11 @@
 
 ## Summary
 
-- Status: draft
-- Shape: compact feature plan with short unit outline
-- Current unit: none; starts after the first commit-to-content output is useful
-- Next action: choose first-class distribution channels and tracking scope
-- Blockers: content format decisions, authenticated publishing policy, channel priority
+- Status: deferred
+- Shape: compact feature plan retained as source context
+- Current unit: none; superseded by `../mvp/stage-03-ai-recap-and-public-publishing.md`
+- Next action: follow the MVP stage/unit plan
+- Blockers: MVP Stage 03 copy/export and public page
 - Validation: platform copy/export checks, share flow smoke checks, `pnpm lint`, `pnpm build`
 
 ## Intent

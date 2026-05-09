@@ -5,7 +5,7 @@
 - Last reviewed: 2026-05-09
 - Evidence basis: repository inspection, dependency upgrade validation, Supabase removal, and legacy app cruft removal
 - Confidence: high for current repo shape, medium for future integration direction
-- Known gaps: production environment, Clerk setup, Convex schema, CI, deployment provider, and required secrets are unknown.
+- Known gaps: production environment, Clerk setup, Convex project/schema, GitHub OAuth app, CI, deployment provider, AI provider key, and required secrets are unknown.
 
 ## Stack
 
@@ -13,7 +13,7 @@
 - Styling: Tailwind CSS 4, shadcn/Radix-style primitives, `lucide-react`, Heroicons, and local components.
 - Data/auth: no provider configured. Intended direction is Clerk for auth and Convex for structured data/realtime.
 - AI: not currently configured in code. Future writing assistance should be added after commit/session data contracts exist.
-- Integrations: none currently active in code. Future integrations are expected for Clerk, Convex, GitHub, AI writing, artifact storage, and publish channels.
+- Integrations: none currently active in code. MVP integrations are Clerk, Convex, GitHub OAuth/API, and AI writing. Artifact storage may be added when needed for screenshots or generated media. Direct publish channels are post-MVP.
 - Package manager: `pnpm`, inferred from `pnpm-lock.yaml` and scripts.
 
 ## Project Surfaces
@@ -32,7 +32,7 @@ pnpm lint
 pnpm build
 ```
 
-Database work should add provider-specific validation when Clerk and Convex are introduced. Browser-visible UI work should include manual checks for the landing page and any newly reintroduced product routes.
+Database work should add provider-specific validation when Clerk and Convex are introduced. Browser-visible UI work should include manual checks for the landing page, authenticated app shell, project creation, live session, recap editor, and public session page as those routes are reintroduced.
 
 ## Handoff Risks
 

@@ -16,6 +16,7 @@ Build from the stripped base toward Clerk auth, Convex data/realtime state, live
 - `log.md` - project-context changelog
 - `Sources.md` - source and evidence index
 - `plans/README.md` - planning contract
+- `plans/mvp/README.md` - current MVP rebuild plan
 - `roadmap.md` - staged project direction
 - `Architecture.md` - current architecture and integration boundaries
 

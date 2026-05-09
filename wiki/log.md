@@ -75,3 +75,10 @@ Log bootstrap/import events, planning direction changes, codebase sync summaries
 
 - Removed work-in-progress implementation language from the public landing page.
 - Added a project instruction that product UI should never expose stack choices, roadmap mechanics, or planning placeholders.
+
+## 2026-05-09 planning | create MVP rebuild plan
+
+- User clarified the reset app should now be planned as an MVP track.
+- MVP target: solo developers building in public.
+- MVP acceptance: GitHub sign-in, profile, connected repository, project, live shipping session, commit selection, manual realtime updates, automatic commit polling, AI recap, public CodeCook page, and copy/export.
+- Created `wiki/plans/mvp/` with four stages and executable units; Stage 01 Unit 01 is the next implementation target.

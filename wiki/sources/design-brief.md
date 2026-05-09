@@ -11,6 +11,8 @@
 
 CodeCook.live currently has a public landing page, layout components, graphics, and reusable UI primitives. Profile, project, import, session, chat, AI, and sharing workflows were removed and should be redesigned around the new Clerk/Convex foundation.
 
+The MVP product surface should include profile onboarding, repository selection, project creation, live session controls, commit selection, timeline updates, AI recap editing, copy/export, and public session pages.
+
 ## Interface Principles
 
 - Prioritize efficient creation and review workflows for developers, especially in session editing and project import.
@@ -30,6 +32,7 @@ CodeCook.live currently has a public landing page, layout components, graphics, 
 - Use tabs and selectors where editor tasks require switching context without navigating away.
 - Loading, empty, error, and save states matter for editor trust because sessions are content-heavy and auto-save appears central.
 - External sharing flows should confirm success/failure and avoid losing draft state.
+- Product UI must never expose implementation status, provider names, roadmap mechanics, or work-in-progress planning. Placeholder UI should feel like real customer-facing product copy.
 
 ## Responsive And Accessibility Expectations
 

@@ -2,11 +2,11 @@
 
 ## Summary
 
-- Status: draft
-- Shape: compact feature plan with short unit outline
-- Current unit: none; starts after Clerk and Convex foundation exists
-- Next action: define the live session data contract on Convex
-- Blockers: Clerk auth and Convex data/realtime foundation
+- Status: deferred
+- Shape: compact feature plan retained as source context
+- Current unit: none; superseded by `../mvp/stage-02-projects-and-live-sessions.md`
+- Next action: follow the MVP stage/unit plan
+- Blockers: MVP Stage 01 foundation
 - Validation: live session route smoke checks, realtime/manual viewer checks, `pnpm lint`, `pnpm build`
 
 ## Intent
