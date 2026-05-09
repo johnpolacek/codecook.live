@@ -6,9 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "go": "pnpm lint && git add . && aicommits && git push origin main",
+    "go": "pnpm check && git status --short",
     "ship": "pnpm go",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "check": "pnpm lint && pnpm build"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",

@@ -14,7 +14,8 @@ This page catalogs source material, repository evidence, and unresolved unknowns
 - `package.json` defines a private Next.js 16.2.6, React 19, TypeScript, Tailwind CSS, Radix/shadcn UI primitive dependencies, icons, theming, linting, and `pnpm` scripts.
 - `app/` uses the Next.js App Router for the public landing page only.
 - `components/` contains home, layout, graphics, and reusable UI primitives.
-- `lib/` contains only shared local utilities.
+- `lib/` contains only shared local utilities; the stale message-time helper from the old session/chat surface was removed.
+- Confirmed stale mock commit tooling, old session screenshot imagery, empty legacy surface directories, and auto-push package scripts were removed on 2026-05-09.
 - Supabase schema, migrations, generated types, clients, and package dependencies were removed on 2026-05-09. No old Supabase data is being migrated.
 - Legacy profile/project/session routes, server actions, chat, Bluesky, GitHub proxy APIs, upload APIs, AI route helpers, S3 screenshot utilities, and disabled placeholders were removed on 2026-05-09 to create a clean base.
 - This folder had no `.git` directory at import time.
