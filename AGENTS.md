@@ -22,6 +22,7 @@ Prefer to commit and pull whenever confident that the code is good and there are
 - Preserve user-authored files and existing Git history.
 - Do not create root-level `docs/` or `tasks/` for durable planning.
 - Name unknowns and contradictions instead of inventing certainty.
+- Never expose implementation status, stack choices, roadmap mechanics, or work-in-progress planning in product UI. If placeholder UI is needed, write customer-facing copy that feels like a real product.
 
 ### Automation Policy
 

@@ -70,3 +70,8 @@ Log bootstrap/import events, planning direction changes, codebase sync summaries
 
 - Removed completed maintenance plan files from `wiki/plans/maintenance/` so the wiki now emphasizes forward-looking product plans.
 - Updated the landing copy from transitional product-direction language to a clearer commit-to-content publishing loop.
+
+## 2026-05-09 product copy | remove internal planning language
+
+- Removed work-in-progress implementation language from the public landing page.
+- Added a project instruction that product UI should never expose stack choices, roadmap mechanics, or planning placeholders.
