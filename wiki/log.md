@@ -85,7 +85,7 @@ Log bootstrap/import events, planning direction changes, codebase sync summaries
 
 ## 2026-05-09 maintenance | clean confirmed legacy cruft
 
-- Completed `wiki/plans/maintenance/confirmed-cruft-cleanup.md`.
+- Completed `wiki/plans/zzz_completed/maintenance/confirmed-cruft-cleanup.md`.
 - Removed confirmed leftovers from the previous incarnation: stale mock commit tooling, old message-time utility, old session screenshot, and empty legacy API/hooks/types/script directories.
 - Replaced the social preview screenshot with a current landing-page capture and changed package `go`/`ship` scripts so they verify locally without auto-pushing to `main`.
 - Validation passed: `pnpm lint`, `pnpm build`, stale-reference sweep, and screenshot inspection.

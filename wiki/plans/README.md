@@ -14,6 +14,7 @@ Fast-path exception: for small, local, reversible fixes that do not change produ
 - Use `maintenance/` for refactors, upgrades, cleanup, infrastructure, migrations, reliability, or tech debt.
 - Use `releases/` only if release planning becomes a maintained workflow.
 - Use `mvp/` for the current ordered MVP rebuild track.
+- Use `zzz_completed/` for completed plans that should remain available as history without crowding active work.
 - Keep bugfix or cleanup planning in the closest relevant existing plan.
 - Record completed work, decisions discovered during implementation, and verification in `../log.md` only when they affect durable project context.
 
@@ -34,6 +35,8 @@ Fast-path exception: for small, local, reversible fixes that do not change produ
 4. `mvp/stage-04-mvp-hardening.md` - UX polish, validation, privacy, launch readiness.
 
 The older feature plans remain as source context, but MVP execution should follow `mvp/` until the first release journey is complete.
+
+Completed plans live under `zzz_completed/`.
 
 Useful orientation commands:
 
