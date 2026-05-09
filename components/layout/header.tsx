@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { SignInButton, UserButton, useUser } from "@clerk/nextjs"
 import { Button } from "@/components/ui/button"
 import { useTheme } from "next-themes"
 import { Moon, Sun } from "lucide-react"
@@ -8,6 +9,7 @@ import LogoIcon from "../graphics/logo-icon"
 
 export default function Header() {
   const { theme, setTheme } = useTheme()
+  const { isSignedIn } = useUser()
 
   return (
     <header className="py-4 px-6 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-40 w-full h-20 border-b border-foreground/10">
@@ -25,6 +27,20 @@ export default function Header() {
             <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
             <span className="sr-only">Toggle theme</span>
           </Button>
+          {isSignedIn ? (
+            <>
+              <Button asChild>
+                <Link href="/app" prefetch={false}>
+                  Open App
+                </Link>
+              </Button>
+              <UserButton />
+            </>
+          ) : (
+            <SignInButton mode="modal">
+              <Button>Sign In</Button>
+            </SignInButton>
+          )}
           <Button asChild>
             <Link href="#how-it-works">How It Works</Link>
           </Button>

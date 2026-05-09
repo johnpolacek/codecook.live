@@ -10,7 +10,7 @@ Confirm provider credentials and local setup for Clerk, Convex, and GitHub OAuth
 
 ## Next Steps
 
-1. Execute `wiki/plans/mvp/units/stage-01/01-clerk-convex-foundation.md`.
+1. Execute `wiki/plans/mvp/units/stage-01/02-convex-app-foundation.md`.
 2. Complete Stage 01 identity, data, GitHub OAuth, and app shell foundation.
 3. Build Stage 02 projects, live sessions, commit selection, realtime timeline, and automatic commit polling.
 4. Build Stage 03 AI recap generation, public session page, and copy/export.

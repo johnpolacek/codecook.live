@@ -1,4 +1,4 @@
-# Unit 02 - User Profile Model
+# Unit 03 - User Profile Model
 
 ## Goal
 

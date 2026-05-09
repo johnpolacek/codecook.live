@@ -29,7 +29,7 @@ Prefer to commit and pull whenever confident that the code is good and there are
 - Commit docs-only wiki changes: auto
 - Commit code changes: auto-after-verification
 - Push changes: ask
-- Install dependencies: ask
+- Install dependencies: auto
 - Run long commands: ask
 - Create plans before code: meaningful-only
 <!-- PROJECT-WIKI-BOOTSTRAPPER:END -->

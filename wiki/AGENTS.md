@@ -31,7 +31,7 @@ The root `AGENTS.md` asks agents to commit and pull whenever confident. For this
 - Commit docs-only wiki changes: auto
 - Commit code changes: auto-after-verification
 - Push changes: ask
-- Install dependencies: ask
+- Install dependencies: auto
 - Run long commands: ask
 - Create plans before code: meaningful-only
 <!-- PROJECT-WIKI-BOOTSTRAPPER:END -->

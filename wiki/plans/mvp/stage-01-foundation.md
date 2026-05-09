@@ -4,9 +4,9 @@
 
 - Status: draft
 - Shape: MVP stage
-- Current unit: Unit 01 - Clerk And Convex App Foundation
-- Next action: implement Clerk provider setup, Convex provider setup, and protected app shell
-- Blockers: Clerk keys, Convex project, GitHub OAuth app credentials
+- Current unit: Unit 02 - Convex App Foundation
+- Next action: implement Convex setup and provider wiring
+- Blockers: Convex project setup
 - Validation: `pnpm lint`, `pnpm build`, auth sign-in smoke checks, Convex function checks
 
 ## Goal
@@ -19,10 +19,11 @@ Stage 01 is complete when a user can sign in with GitHub, land in an authenticat
 
 ## Unit Sequence
 
-1. `units/stage-01/01-clerk-convex-foundation.md`
-2. `units/stage-01/02-user-profile-model.md`
-3. `units/stage-01/03-github-oauth-repository-access.md`
-4. `units/stage-01/04-authenticated-app-shell.md`
+1. `units/stage-01/01-clerk-auth-foundation.md`
+2. `units/stage-01/02-convex-app-foundation.md`
+3. `units/stage-01/03-user-profile-model.md`
+4. `units/stage-01/04-github-oauth-repository-access.md`
+5. `units/stage-01/05-authenticated-app-shell.md`
 
 ## Key Decisions
 

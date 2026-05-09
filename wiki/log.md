@@ -114,3 +114,11 @@ Log bootstrap/import events, planning direction changes, codebase sync summaries
 - Replaced single-file post-MVP feature plans with directory-based plans that follow the project-wiki stage/unit convention.
 - `ai-writing-style-controls` now has a README, one stage file, and five unit files.
 - `automatic-developer-shorts` now has a README, four stage files, and thirteen unit files.
+
+## 2026-05-09 implementation | complete Clerk auth foundation
+
+- Completed `wiki/plans/mvp/units/stage-01/01-clerk-auth-foundation.md`.
+- Split the original combined Clerk/Convex foundation unit into separate Clerk and Convex units, then renumbered remaining Stage 01 units.
+- Added Clerk SDK/provider wiring, Next 16 `proxy.ts` protected-route middleware, a minimal `/app` protected route, header auth entry points, and Clerk env examples.
+- Updated repo automation policy so dependency installs are automatic.
+- Validation passed: `pnpm lint`, `pnpm build`, and public `/` smoke check. Protected `/app` redirect and signed-in route checks remain blocked until real Clerk keys are available locally.

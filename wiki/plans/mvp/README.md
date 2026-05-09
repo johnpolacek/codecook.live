@@ -5,9 +5,9 @@
 - Status: draft
 - Shape: multi-stage MVP
 - Current stage: Stage 01 - Identity And Data Foundation
-- Current unit: Stage 01 Unit 01 - Clerk And Convex App Foundation
-- Next action: implement Clerk auth and Convex setup from `units/stage-01/01-clerk-convex-foundation.md`
-- Blockers: Clerk application keys, Convex project setup, GitHub OAuth app credentials
+- Current unit: Stage 01 Unit 02 - Convex App Foundation
+- Next action: implement Convex setup from `units/stage-01/02-convex-app-foundation.md`
+- Blockers: Convex project setup
 - Validation: `pnpm lint`, `pnpm build`, provider-specific auth/data checks, browser workflow checks
 
 ## MVP Outcome
@@ -42,7 +42,7 @@ Solo developers building in public who want their shipping activity to become au
 ```bash
 sed -n '1,120p' wiki/plans/mvp/README.md
 sed -n '1,180p' wiki/plans/mvp/stage-01-foundation.md
-sed -n '1,180p' wiki/plans/mvp/units/stage-01/01-clerk-convex-foundation.md
+sed -n '1,180p' wiki/plans/mvp/units/stage-01/02-convex-app-foundation.md
 ```
 
 ## Deferred Until After MVP

@@ -3,17 +3,17 @@
 ## Status
 
 - Last reviewed: 2026-05-09
-- Evidence basis: repository inspection, dependency upgrade validation, Supabase removal, and legacy app cruft removal
+- Evidence basis: repository inspection, dependency upgrade validation, Supabase removal, legacy app cruft removal, and Clerk auth foundation implementation
 - Confidence: high for current repo shape, medium for future integration direction
-- Known gaps: production environment, Clerk setup, Convex project/schema, GitHub OAuth app, CI, deployment provider, AI provider key, and required secrets are unknown.
+- Known gaps: production environment, real Clerk keys, Convex project/schema, GitHub OAuth app, CI, deployment provider, AI provider key, and required secrets are unknown.
 
 ## Stack
 
 - Framework: Next.js 16.2.6 App Router with React 19.2.6 and TypeScript.
 - Styling: Tailwind CSS 4, shadcn/Radix-style primitives, `lucide-react`, Heroicons, and local components.
-- Data/auth: no provider configured. Intended direction is Clerk for auth and Convex for structured data/realtime.
+- Data/auth: Clerk SDK and protected-route middleware are configured for auth; Convex is the next planned structured data/realtime provider.
 - AI: not currently configured in code. Future writing assistance should be added after commit/session data contracts exist.
-- Integrations: none currently active in code. MVP integrations are Clerk, Convex, GitHub OAuth/API, and AI writing. Artifact storage may be added when needed for screenshots or generated media. Direct publish channels are post-MVP.
+- Integrations: Clerk is active in code. MVP integrations still to add are Convex, GitHub OAuth/API, and AI writing. Artifact storage may be added when needed for screenshots or generated media. Direct publish channels are post-MVP.
 - Post-MVP video rendering is unchosen; automatic shorts must evaluate Remotion, Hyperframe, or a renderer adapter before implementation.
 - Package manager: `pnpm`, inferred from `pnpm-lock.yaml` and scripts.
 
@@ -38,6 +38,6 @@ Database work should add provider-specific validation when Clerk and Convex are 
 ## Handoff Risks
 
 - Next 16 removed `next lint`; this project now uses `eslint .` through `pnpm lint`.
-- The app intentionally has no database layer until Clerk and Convex are added.
+- The app intentionally has no database layer until Convex is added.
 - Legacy integrations were removed rather than preserved as disabled placeholders; reintroduce them from fresh contracts.
 - Generated video assets should be treated as artifacts: MP4s, thumbnails, captions, render settings, and publishing metadata should not become canonical app state.
