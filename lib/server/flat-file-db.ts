@@ -9,7 +9,13 @@ export type JsonRecord = Record<string, JsonValue>
 const DEFAULT_DATA_DIR = ".data"
 
 function getDataRoot() {
-  return path.resolve(process.cwd(), process.env.CODECOOK_DATA_DIR || DEFAULT_DATA_DIR)
+  const dataDir = process.env.CODECOOK_DATA_DIR || DEFAULT_DATA_DIR
+
+  if (path.isAbsolute(dataDir)) {
+    return dataDir
+  }
+
+  return path.join(/*turbopackIgnore: true*/ process.cwd(), dataDir)
 }
 
 function assertSafeCollection(collection: string) {
@@ -62,4 +68,14 @@ export async function appendRecord<T extends JsonRecord>(collection: string, rec
   records.push(record)
   await writeCollection(collection, records)
   return record
+}
+
+export async function replaceCollection<T extends JsonRecord>(
+  collection: string,
+  updater: (records: T[]) => T[] | Promise<T[]>
+) {
+  const records = await readCollection<T>(collection)
+  const nextRecords = await updater(records)
+  await writeCollection(collection, nextRecords)
+  return nextRecords
 }

@@ -135,3 +135,11 @@ Log bootstrap/import events, planning direction changes, codebase sync summaries
 - Added flat-file JSON helpers with atomic writes, S3-compatible immutable storage helpers, env examples, `.data/` ignore rules, and `pnpm smoke:data`.
 - Validation passed: `pnpm smoke:data` and `pnpm check`.
 - Real S3 upload verification is deferred until bucket credentials exist.
+
+## 2026-05-10 implementation | complete user profile model
+
+- Completed `wiki/plans/mvp/units/stage-01/03-user-profile-model.md`.
+- Added flat-file-backed creator profile read/upsert behavior, Clerk user ID mapping, display name and username validation, reserved username checks, and duplicate username checks.
+- Added `/app` creator profile onboarding/update UI backed by a server action.
+- Validation passed: `pnpm smoke:data`, `pnpm smoke:profiles`, `pnpm check`, public `/` smoke check, and signed-out `/app` Clerk redirect check.
+- Interactive signed-in profile submission remains deferred until a browser sign-in session is available.

@@ -10,7 +10,8 @@
     "ship": "pnpm go",
     "lint": "eslint .",
     "check": "pnpm lint && pnpm build",
-    "smoke:data": "tsx scripts/smoke-flat-file-db.mjs"
+    "smoke:data": "tsx scripts/smoke-flat-file-db.mjs",
+    "smoke:profiles": "tsx scripts/smoke-profiles.mjs"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1045.0",

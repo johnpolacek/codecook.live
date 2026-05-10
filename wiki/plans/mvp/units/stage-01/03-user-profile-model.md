@@ -1,5 +1,13 @@
 # Unit 03 - User Profile Model
 
+## Summary
+
+- Status: completed
+- Completed: 2026-05-10
+- Result: flat-file-backed creator profile records, Clerk user mapping, onboarding/update form, and validation smoke checks are in place.
+- Follow-up: execute `04-github-oauth-repository-access.md`.
+- Blockers: full browser sign-in/profile submission verification requires interactive Clerk sign-in.
+
 ## Goal
 
 Create the flat-file-backed creator profile foundation.
@@ -41,3 +49,18 @@ Create the flat-file-backed creator profile foundation.
 ## Completion Gate
 
 This unit is complete when a signed-in user can create and update a durable creator profile.
+
+## Result
+
+- Added `lib/server/profiles.ts` for creator profile read/upsert behavior.
+- Added Clerk user ID mapping, display name validation, username normalization, reserved username checks, and duplicate username checks.
+- Added `/app` profile onboarding/update UI backed by a server action.
+- Added profile smoke verification over flat-file JSON data.
+
+## Verification Result
+
+- Passed: `pnpm smoke:data`.
+- Passed: `pnpm smoke:profiles`.
+- Passed: `pnpm check`.
+- Passed: public `/` returns 200 and signed-out `/app` redirects to Clerk sign-in.
+- Deferred: interactive signed-in profile submission check because it requires completing Clerk sign-in in a browser session.
