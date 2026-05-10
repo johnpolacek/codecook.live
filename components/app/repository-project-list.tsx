@@ -1,4 +1,5 @@
-import { ArrowRight, FolderGit2 } from "lucide-react"
+import Link from "next/link"
+import { ArrowRight, ExternalLink, FolderGit2 } from "lucide-react"
 
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -7,9 +8,10 @@ import { type GitHubAppRepository } from "@/lib/server/github-app"
 
 type RepositoryProjectListProps = {
   repositories: GitHubAppRepository[]
+  manageUrl?: string
 }
 
-export default function RepositoryProjectList({ repositories }: RepositoryProjectListProps) {
+export default function RepositoryProjectList({ repositories, manageUrl }: RepositoryProjectListProps) {
   if (repositories.length === 0) {
     return (
       <Card className="rounded-lg shadow-none">
@@ -26,9 +28,19 @@ export default function RepositoryProjectList({ repositories }: RepositoryProjec
 
   return (
     <section className="space-y-4">
-      <div>
-        <h1 className="text-3xl font-extrabold sm:text-4xl">Projects</h1>
-        <p className="mt-2 text-muted-foreground">Each connected repository is a CodeCook project.</p>
+      <div className="flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <h1 className="text-3xl font-extrabold sm:text-4xl">Projects</h1>
+          <p className="mt-2 text-muted-foreground">Each connected repository is a CodeCook project.</p>
+        </div>
+        {manageUrl ? (
+          <Button asChild variant="outline">
+            <Link href={manageUrl}>
+              Manage repositories
+              <ExternalLink />
+            </Link>
+          </Button>
+        ) : null}
       </div>
       <div className="grid gap-4 md:grid-cols-2">
         {repositories.map((repository) => (

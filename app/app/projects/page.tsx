@@ -20,11 +20,15 @@ export default async function ProjectsPage({ searchParams }: ProjectsPageProps) 
   const repositoryConnectionState = await getCurrentRepositoryConnectionState(true)
   const params = await searchParams
   const setupMessage = getGitHubSetupMessage(params?.github)
+  const repositories = repositoryConnectionState.repositories
+  const manageUrl = repositoryConnectionState.status === "connected" ? repositoryConnectionState.connection.settingsUrl : ""
 
   return (
     <div className="space-y-8">
-      <RepositoryProjectList repositories={repositoryConnectionState.repositories} />
-      <RepositoryConnectionPanel state={repositoryConnectionState} setupMessage={setupMessage} />
+      <RepositoryProjectList repositories={repositories} manageUrl={manageUrl} />
+      {repositories.length === 0 ? (
+        <RepositoryConnectionPanel state={repositoryConnectionState} setupMessage={setupMessage} />
+      ) : null}
     </div>
   )
 }

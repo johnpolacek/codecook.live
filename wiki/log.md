@@ -190,4 +190,5 @@ Log bootstrap/import events, planning direction changes, codebase sync summaries
 - Added repository-backed project cards on `/app` and `/app/projects`.
 - Reordered `/app/projects` so project cards are primary and repository connection management is secondary.
 - Removed redundant project-page eyebrow text and connected-state message noise.
+- Removed the duplicate connected-repositories panel from `/app/projects` once repositories are connected.
 - Validation passed: `pnpm smoke:github-app` and `pnpm check`.
