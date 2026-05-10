@@ -5,8 +5,8 @@
 - Status: draft
 - Shape: multi-stage MVP
 - Current stage: Stage 01 - Identity And Data Foundation
-- Current unit: Stage 01 Unit 05 - Authenticated App Shell
-- Next action: implement authenticated app shell from `units/stage-01/05-authenticated-app-shell.md`
+- Current unit: Stage 01 Unit 06 - GitHub App Repository Access
+- Next action: implement GitHub App repository access from `units/stage-01/06-github-app-repository-access.md`
 - Blockers: interactive Clerk sign-in for full browser verification
 - Validation: `pnpm lint`, `pnpm build`, provider-specific auth/data checks, browser workflow checks
 
@@ -42,7 +42,7 @@ Solo developers building in public who want their shipping activity to become au
 ```bash
 sed -n '1,120p' wiki/plans/mvp/README.md
 sed -n '1,180p' wiki/plans/mvp/stage-01-foundation.md
-sed -n '1,180p' wiki/plans/mvp/units/stage-01/05-authenticated-app-shell.md
+sed -n '1,180p' wiki/plans/mvp/units/stage-01/06-github-app-repository-access.md
 ```
 
 ## Deferred Until After MVP

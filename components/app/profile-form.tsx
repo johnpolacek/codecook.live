@@ -18,7 +18,7 @@ export default function ProfileForm({ defaultDisplayName = "", defaultUsername =
   const [state, formAction, isPending] = useActionState(saveProfileAction, initialState)
 
   return (
-    <form action={formAction} className="mt-8 max-w-xl space-y-5 rounded-lg border bg-card p-6">
+    <form action={formAction} className="max-w-xl space-y-5">
       <div className="space-y-2">
         <Label htmlFor="displayName">Display name</Label>
         <Input id="displayName" name="displayName" defaultValue={defaultDisplayName} required minLength={2} maxLength={80} />

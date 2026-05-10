@@ -10,7 +10,7 @@ Confirm provider credentials and local setup for Clerk, S3-compatible artifact s
 
 ## Next Steps
 
-1. Execute `wiki/plans/mvp/units/stage-01/05-authenticated-app-shell.md`.
+1. Execute `wiki/plans/mvp/units/stage-01/06-github-app-repository-access.md`.
 2. Complete Stage 01 identity, data, GitHub OAuth sign-in, GitHub App repository access, and app shell foundation.
 3. Build Stage 02 projects, live sessions, commit selection, realtime timeline, and automatic commit polling.
 4. Build Stage 03 AI recap generation, public session page, and copy/export.

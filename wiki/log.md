@@ -158,3 +158,11 @@ Log bootstrap/import events, planning direction changes, codebase sync summaries
 - Added `wiki/plans/mvp/units/stage-01/06-github-app-repository-access.md` for read-only, installation-scoped repository and commit access.
 - Removed the OAuth-token repository listing helper, repository access panel, and GitHub smoke script because GitHub OAuth Apps do not offer private repository read-only access.
 - Updated roadmap, architecture, and technical source context to reflect GitHub App ownership of repository access.
+
+## 2026-05-10 implementation | authenticated app shell
+
+- Completed `wiki/plans/mvp/units/stage-01/05-authenticated-app-shell.md`.
+- Added authenticated app navigation, dashboard, projects route, and profile route.
+- Added customer-facing empty states for profile setup, project setup, and future recaps without exposing implementation details.
+- Validation passed: `pnpm check`, public `/` route smoke check, and signed-out Clerk redirect checks for `/app` and `/app/projects`.
+- Interactive signed-in route verification remains deferred until a Clerk browser session is available.
