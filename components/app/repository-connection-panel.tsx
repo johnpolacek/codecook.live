@@ -25,8 +25,8 @@ export default function RepositoryConnectionPanel({ state, setupMessage }: Repos
         <div className="flex size-10 items-center justify-center rounded-md bg-secondary">
           {isConnected ? <CheckCircle2 className="size-5" /> : <FolderGit2 className="size-5" />}
         </div>
-        <CardTitle>{isConnected ? "Repositories connected" : "Connect your first repository"}</CardTitle>
-        <CardDescription>{state.message}</CardDescription>
+        <CardTitle>{isConnected ? "Connected repositories" : "Connect your first repository"}</CardTitle>
+        {isConnected ? null : <CardDescription>{state.message}</CardDescription>}
       </CardHeader>
       <CardContent className="space-y-4">
         {setupMessage && setupMessage !== state.message ? (
@@ -57,11 +57,6 @@ export default function RepositoryConnectionPanel({ state, setupMessage }: Repos
                     Manage GitHub repositories
                     <ExternalLink />
                   </Link>
-                </Button>
-              ) : null}
-              {installUrl ? (
-                <Button asChild variant="outline">
-                  <Link href={installUrl}>Connect another installation</Link>
                 </Button>
               ) : null}
             </div>
