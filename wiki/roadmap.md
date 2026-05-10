@@ -11,7 +11,7 @@ Confirm provider credentials and local setup for Clerk, S3-compatible artifact s
 ## Next Steps
 
 1. Complete manual GitHub App setup and verify a live repository installation locally.
-2. Execute `wiki/plans/mvp/units/stage-02/01-project-create-from-repository.md`.
+2. Execute `wiki/plans/mvp/units/stage-02/02-live-session-lifecycle.md`.
 3. Build Stage 02 projects, live sessions, commit selection, realtime timeline, and automatic commit polling.
 4. Build Stage 03 AI recap generation, public session page, and copy/export.
 5. Complete Stage 04 MVP hardening and acceptance pass.

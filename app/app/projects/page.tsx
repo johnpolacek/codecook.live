@@ -1,10 +1,7 @@
-import Link from "next/link"
 import { redirect } from "next/navigation"
-import { FolderGit2 } from "lucide-react"
 
 import RepositoryConnectionPanel from "@/components/app/repository-connection-panel"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import RepositoryProjectList from "@/components/app/repository-project-list"
 import { getCurrentProfile } from "@/lib/server/profiles"
 import { getCurrentRepositoryConnectionState } from "@/lib/server/repository-connections"
 
@@ -34,20 +31,7 @@ export default async function ProjectsPage({ searchParams }: ProjectsPageProps) 
         </p>
       </div>
       <RepositoryConnectionPanel state={repositoryConnectionState} setupMessage={setupMessage} />
-      <Card className="rounded-lg shadow-none">
-        <CardHeader>
-          <div className="flex size-10 items-center justify-center rounded-md bg-secondary">
-            <FolderGit2 className="size-5" />
-          </div>
-          <CardTitle className="text-xl">No projects yet</CardTitle>
-          <CardDescription>Choose a connected repository to create your first CodeCook project.</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <Button asChild>
-            <Link href="/app">Go to dashboard</Link>
-          </Button>
-        </CardContent>
-      </Card>
+      <RepositoryProjectList repositories={repositoryConnectionState.repositories} />
     </div>
   )
 }

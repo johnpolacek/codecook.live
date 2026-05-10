@@ -4,22 +4,22 @@
 
 - Status: draft
 - Shape: MVP stage
-- Current unit: Unit 01 - Project Create From Repository
-- Next action: implement project creation from a connected GitHub repository
+- Current unit: Unit 02 - Live Session Lifecycle
+- Next action: implement live session lifecycle for a repository-backed project
 - Blockers: manual GitHub App setup and live installation verification
 - Validation: `pnpm lint`, `pnpm build`, flat-file data checks, browser workflow checks for projects and sessions
 
 ## Goal
 
-Build the core live workflow: create a project from a GitHub repository, start a live shipping session, select commits, post manual updates, and expose realtime session state for owners and public viewers.
+Build the core live workflow: use connected repositories as projects, start a live shipping session, select commits, post manual updates, and expose realtime session state for owners and public viewers.
 
 ## Completion Gate
 
-Stage 02 is complete when an authenticated creator can create a GitHub-backed project, start an active session, select commits, add manual timeline updates, and see those updates reflected on a session timeline.
+Stage 02 is complete when an authenticated creator can use a connected repository as a project, start an active session, select commits, add manual timeline updates, and see those updates reflected on a session timeline.
 
 ## Unit Sequence
 
-1. `units/stage-02/01-project-create-from-repository.md`
+1. `units/stage-02/01-repository-backed-project-model.md`
 2. `units/stage-02/02-live-session-lifecycle.md`
 3. `units/stage-02/03-commit-selection-and-diff-context.md`
 4. `units/stage-02/04-realtime-timeline-updates.md`

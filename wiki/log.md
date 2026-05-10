@@ -182,3 +182,10 @@ Log bootstrap/import events, planning direction changes, codebase sync summaries
 - Added manual setup notes for local/dev and production GitHub Apps with Contents read-only permissions.
 - Validation passed: `pnpm smoke:github-app` and `pnpm check`.
 - Live GitHub App installation verification remains manual until app credentials are configured.
+
+## 2026-05-10 product model correction | repositories are projects
+
+- Replaced the separate project creation unit with `wiki/plans/mvp/units/stage-02/01-repository-backed-project-model.md`.
+- Updated Stage 02 direction so connected repositories automatically appear as CodeCook projects.
+- Added repository-backed project cards on `/app` and `/app/projects`.
+- Validation passed: `pnpm smoke:github-app` and `pnpm check`.

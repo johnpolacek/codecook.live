@@ -3,6 +3,7 @@ import { ArrowRight, Sparkles, UserRound } from "lucide-react"
 
 import ProfileSetupPanel from "@/components/app/profile-setup-panel"
 import RepositoryConnectionPanel from "@/components/app/repository-connection-panel"
+import RepositoryProjectList from "@/components/app/repository-project-list"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -65,6 +66,7 @@ export default async function AppPage() {
               </Button>
             </CardContent>
           </Card>
+          <RepositoryProjectList repositories={repositoryConnectionState.repositories} />
         </>
       ) : (
         <section className="space-y-8">

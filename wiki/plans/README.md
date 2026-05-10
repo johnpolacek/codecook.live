@@ -23,8 +23,8 @@ Fast-path exception: for small, local, reversible fixes that do not change produ
 - Active plan: `mvp/README.md`
 - Planning shape: multi-stage MVP
 - Current stage: Stage 01 - Identity And Data Foundation
-- Current unit: Stage 02 Unit 01 - Project Create From Repository
-- Next action: implement `mvp/units/stage-02/01-project-create-from-repository.md`
+- Current unit: Stage 02 Unit 02 - Live Session Lifecycle
+- Next action: implement `mvp/units/stage-02/02-live-session-lifecycle.md`
 - Blockers: manual GitHub App setup and live installation verification
 
 ## Plan Sequence
@@ -51,7 +51,7 @@ sed -n '1,220p' wiki/roadmap.md
 sed -n '1,220p' wiki/Sources.md
 sed -n '1,120p' wiki/plans/mvp/README.md
 sed -n '1,180p' wiki/plans/mvp/stage-01-foundation.md
-sed -n '1,180p' wiki/plans/mvp/units/stage-02/01-project-create-from-repository.md
+sed -n '1,180p' wiki/plans/mvp/units/stage-02/02-live-session-lifecycle.md
 sed -n '1,180p' wiki/plans/post-mvp/ai-writing-style-controls/README.md
 sed -n '1,180p' wiki/plans/post-mvp/automatic-developer-shorts/README.md
 ```

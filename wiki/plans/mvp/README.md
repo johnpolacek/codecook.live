@@ -5,8 +5,8 @@
 - Status: draft
 - Shape: multi-stage MVP
 - Current stage: Stage 01 - Identity And Data Foundation
-- Current unit: Stage 02 Unit 01 - Project Create From Repository
-- Next action: implement project creation from `units/stage-02/01-project-create-from-repository.md`
+- Current unit: Stage 02 Unit 02 - Live Session Lifecycle
+- Next action: implement live session lifecycle from `units/stage-02/02-live-session-lifecycle.md`
 - Blockers: manual GitHub App setup and live installation verification
 - Validation: `pnpm lint`, `pnpm build`, provider-specific auth/data checks, browser workflow checks
 
@@ -22,13 +22,12 @@ Solo developers building in public who want their shipping activity to become au
 
 1. Sign in with GitHub.
 2. Create a public creator profile.
-3. Connect a GitHub repository.
-4. Create a CodeCook project from that repository.
-5. Start a live shipping session.
-6. Select commits and add manual timeline updates while work is active.
-7. Generate and edit recap content with AI.
-8. Publish a public session page.
-9. Copy/export generated content for external sharing.
+3. Connect a GitHub repository, which becomes a CodeCook project.
+4. Start a live shipping session.
+5. Select commits and add manual timeline updates while work is active.
+6. Generate and edit recap content with AI.
+7. Publish a public session page.
+8. Copy/export generated content for external sharing.
 
 ## Stage Sequence
 
@@ -42,7 +41,7 @@ Solo developers building in public who want their shipping activity to become au
 ```bash
 sed -n '1,120p' wiki/plans/mvp/README.md
 sed -n '1,180p' wiki/plans/mvp/stage-01-foundation.md
-sed -n '1,180p' wiki/plans/mvp/units/stage-02/01-project-create-from-repository.md
+sed -n '1,180p' wiki/plans/mvp/units/stage-02/02-live-session-lifecycle.md
 ```
 
 ## Deferred Until After MVP
