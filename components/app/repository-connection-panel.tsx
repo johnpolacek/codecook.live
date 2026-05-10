@@ -18,14 +18,17 @@ export default function RepositoryConnectionPanel({ state, setupMessage }: Repos
   const connection = state.status === "connected" || state.status === "error" ? state.connection : null
   const hasAllRepositoryAccess = connection?.repositorySelection === "all"
   const settingsUrl = connection?.settingsUrl || ""
+  const title = isConnected ? "Connected repositories" : "Connect your first repository"
 
   return (
     <Card className="rounded-lg shadow-none">
       <CardHeader>
-        <div className="flex size-10 items-center justify-center rounded-md bg-secondary">
-          {isConnected ? <CheckCircle2 className="size-5" /> : <FolderGit2 className="size-5" />}
+        <div className="flex items-center gap-3">
+          <div className="flex size-10 items-center justify-center rounded-md bg-secondary">
+            {isConnected ? <CheckCircle2 className="size-5" /> : <FolderGit2 className="size-5" />}
+          </div>
+          <CardTitle>{title}</CardTitle>
         </div>
-        <CardTitle>{isConnected ? "Connected repositories" : "Connect your first repository"}</CardTitle>
         {isConnected ? null : <CardDescription>{state.message}</CardDescription>}
       </CardHeader>
       <CardContent className="space-y-4">
@@ -50,16 +53,6 @@ export default function RepositoryConnectionPanel({ state, setupMessage }: Repos
         ) : null}
         {isConnected ? (
           <div className="space-y-3">
-            <div className="flex flex-wrap gap-3">
-              {settingsUrl ? (
-                <Button asChild variant="outline">
-                  <Link href={settingsUrl}>
-                    Manage GitHub repositories
-                    <ExternalLink />
-                  </Link>
-                </Button>
-              ) : null}
-            </div>
             {state.repositories.slice(0, 6).map((repository) => (
               <div key={repository.id} className="flex items-center justify-between gap-4 rounded-md border p-4">
                 <div>
@@ -71,6 +64,16 @@ export default function RepositoryConnectionPanel({ state, setupMessage }: Repos
             ))}
             {state.repositories.length > 6 ? (
               <p className="text-sm text-muted-foreground">Showing 6 of {state.repositories.length} repositories.</p>
+            ) : null}
+            {settingsUrl ? (
+              <div className="pt-2">
+                <Button asChild variant="outline">
+                  <Link href={settingsUrl}>
+                    Manage GitHub repositories
+                    <ExternalLink />
+                  </Link>
+                </Button>
+              </div>
             ) : null}
           </div>
         ) : installUrl && state.status !== "missing-profile" ? (

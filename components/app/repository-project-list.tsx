@@ -27,7 +27,8 @@ export default function RepositoryProjectList({ repositories }: RepositoryProjec
   return (
     <section className="space-y-4">
       <div>
-        <h2 className="text-2xl font-bold">Projects</h2>
+        <p className="text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">Projects</p>
+        <h1 className="mt-3 text-3xl font-extrabold sm:text-4xl">Projects</h1>
         <p className="mt-2 text-muted-foreground">Each connected repository is a CodeCook project.</p>
       </div>
       <div className="grid gap-4 md:grid-cols-2">

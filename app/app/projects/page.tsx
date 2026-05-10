@@ -23,15 +23,8 @@ export default async function ProjectsPage({ searchParams }: ProjectsPageProps) 
 
   return (
     <div className="space-y-8">
-      <div>
-        <p className="text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">Projects</p>
-        <h1 className="mt-3 text-3xl font-extrabold sm:text-4xl">Your shipping work</h1>
-        <p className="mt-4 max-w-2xl text-muted-foreground">
-          Create a project from a repository, then turn active work into live sessions and shareable recaps.
-        </p>
-      </div>
-      <RepositoryConnectionPanel state={repositoryConnectionState} setupMessage={setupMessage} />
       <RepositoryProjectList repositories={repositoryConnectionState.repositories} />
+      <RepositoryConnectionPanel state={repositoryConnectionState} setupMessage={setupMessage} />
     </div>
   )
 }
