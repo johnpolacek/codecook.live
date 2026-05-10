@@ -111,6 +111,7 @@ This unit is complete when a signed-in creator can install the GitHub App, selec
 - Added `/app/github/setup` to capture GitHub's installation redirect and save the installation ID.
 - Added repository connection UI on `/app` and `/app/projects`.
 - Added an all-repositories installation notice with a link to manage the GitHub installation.
+- Added connected-state actions to manage selected repositories or connect another GitHub installation.
 - Added visible setup feedback for failed GitHub App installation redirects, including invalid private key configuration.
 - Added `GITHUB_APP_ID`, `GITHUB_APP_SLUG`, and `GITHUB_APP_PRIVATE_KEY_BASE64` to `.env.example`.
 - Added `pnpm smoke:github-app`.

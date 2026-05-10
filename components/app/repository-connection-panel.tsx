@@ -50,6 +50,21 @@ export default function RepositoryConnectionPanel({ state, setupMessage }: Repos
         ) : null}
         {isConnected ? (
           <div className="space-y-3">
+            <div className="flex flex-wrap gap-3">
+              {settingsUrl ? (
+                <Button asChild variant="outline">
+                  <Link href={settingsUrl}>
+                    Manage GitHub repositories
+                    <ExternalLink />
+                  </Link>
+                </Button>
+              ) : null}
+              {installUrl ? (
+                <Button asChild variant="outline">
+                  <Link href={installUrl}>Connect another installation</Link>
+                </Button>
+              ) : null}
+            </div>
             {state.repositories.slice(0, 6).map((repository) => (
               <div key={repository.id} className="flex items-center justify-between gap-4 rounded-md border p-4">
                 <div>

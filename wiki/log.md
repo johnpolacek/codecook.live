@@ -177,6 +177,7 @@ Log bootstrap/import events, planning direction changes, codebase sync summaries
 - Added `/app/github/setup` to capture GitHub App installation redirects and `/app` plus `/app/projects` repository connection UI.
 - Added UI handling for installations that grant all-repositories access, including a GitHub installation management link when available.
 - Added visible setup feedback for failed GitHub App installation redirects, including invalid private key configuration.
+- Added connected-state actions to manage selected repositories or connect another GitHub installation.
 - Removed redundant connected-state messaging and updated the project empty state after repository connection succeeds.
 - Added manual setup notes for local/dev and production GitHub Apps with Contents read-only permissions.
 - Validation passed: `pnpm smoke:github-app` and `pnpm check`.
