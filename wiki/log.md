@@ -143,3 +143,11 @@ Log bootstrap/import events, planning direction changes, codebase sync summaries
 - Added `/app` creator profile onboarding/update UI backed by a server action.
 - Validation passed: `pnpm smoke:data`, `pnpm smoke:profiles`, `pnpm check`, public `/` smoke check, and signed-out `/app` Clerk redirect check.
 - Interactive signed-in profile submission remains deferred until a browser sign-in session is available.
+
+## 2026-05-10 implementation | complete GitHub OAuth repository access
+
+- Completed `wiki/plans/mvp/units/stage-01/04-github-oauth-repository-access.md`.
+- Added Clerk-backed GitHub OAuth token retrieval, GitHub repository listing, repository access states, and `/app` repository access UI after profile setup.
+- Added manual setup notes for GitHub OAuth apps and Clerk GitHub social connection scopes.
+- Validation passed: `pnpm smoke:github` and `pnpm check`.
+- Live repository listing is deferred until GitHub OAuth app credentials and Clerk social connection scopes are configured manually.

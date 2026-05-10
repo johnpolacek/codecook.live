@@ -5,9 +5,9 @@
 - Status: draft
 - Shape: multi-stage MVP
 - Current stage: Stage 01 - Identity And Data Foundation
-- Current unit: Stage 01 Unit 04 - GitHub OAuth Repository Access
-- Next action: implement GitHub OAuth repository access from `units/stage-01/04-github-oauth-repository-access.md`
-- Blockers: GitHub OAuth app credentials and required Clerk OAuth scope configuration
+- Current unit: Stage 01 Unit 05 - Authenticated App Shell
+- Next action: implement authenticated app shell from `units/stage-01/05-authenticated-app-shell.md`
+- Blockers: interactive Clerk sign-in for full browser verification
 - Validation: `pnpm lint`, `pnpm build`, provider-specific auth/data checks, browser workflow checks
 
 ## MVP Outcome
@@ -42,7 +42,7 @@ Solo developers building in public who want their shipping activity to become au
 ```bash
 sed -n '1,120p' wiki/plans/mvp/README.md
 sed -n '1,180p' wiki/plans/mvp/stage-01-foundation.md
-sed -n '1,180p' wiki/plans/mvp/units/stage-01/04-github-oauth-repository-access.md
+sed -n '1,180p' wiki/plans/mvp/units/stage-01/05-authenticated-app-shell.md
 ```
 
 ## Deferred Until After MVP

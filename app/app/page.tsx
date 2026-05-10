@@ -1,6 +1,7 @@
 import Header from "@/components/layout/header"
 import Footer from "@/components/layout/footer"
 import ProfileForm from "@/components/app/profile-form"
+import RepositoryAccessPanel from "@/components/app/repository-access-panel"
 import { getCurrentProfile } from "@/lib/server/profiles"
 
 export default async function AppPage() {
@@ -19,6 +20,7 @@ export default async function AppPage() {
                 Your creator profile is ready. Next, connect a repository and start shaping shipped work into audience-ready updates.
               </p>
               <ProfileForm defaultDisplayName={profile.displayName} defaultUsername={profile.username} />
+              <RepositoryAccessPanel />
             </>
           ) : (
             <>

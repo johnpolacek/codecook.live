@@ -4,9 +4,9 @@
 
 - Status: draft
 - Shape: MVP stage
-- Current unit: Unit 04 - GitHub OAuth Repository Access
-- Next action: implement GitHub OAuth repository access
-- Blockers: GitHub OAuth app credentials and required Clerk OAuth scope configuration
+- Current unit: Unit 05 - Authenticated App Shell
+- Next action: implement authenticated app shell
+- Blockers: interactive Clerk sign-in for full browser verification
 - Validation: `pnpm lint`, `pnpm build`, auth sign-in smoke checks, local data smoke checks, S3 config checks
 
 ## Goal
