@@ -144,10 +144,17 @@ Log bootstrap/import events, planning direction changes, codebase sync summaries
 - Validation passed: `pnpm smoke:data`, `pnpm smoke:profiles`, `pnpm check`, public `/` smoke check, and signed-out `/app` Clerk redirect check.
 - Interactive signed-in profile submission remains deferred until a browser sign-in session is available.
 
-## 2026-05-10 implementation | complete GitHub OAuth repository access
+## 2026-05-10 implementation | superseded GitHub OAuth repository access
 
-- Completed `wiki/plans/mvp/units/stage-01/04-github-oauth-repository-access.md`.
+- Completed the original Unit 04 OAuth repository access attempt.
 - Added Clerk-backed GitHub OAuth token retrieval, GitHub repository listing, repository access states, and `/app` repository access UI after profile setup.
 - Added manual setup notes for GitHub OAuth apps and Clerk GitHub social connection scopes.
-- Validation passed: `pnpm smoke:github` and `pnpm check`.
-- Live repository listing is deferred until GitHub OAuth app credentials and Clerk social connection scopes are configured manually.
+- Validation passed before later correction.
+- This direction was superseded by the GitHub App planning correction below.
+
+## 2026-05-10 planning correction | move repository access to GitHub App
+
+- Revised and renamed Unit 04 to `wiki/plans/mvp/units/stage-01/04-github-oauth-login.md` so GitHub OAuth is login-only and requests no repository scopes.
+- Added `wiki/plans/mvp/units/stage-01/06-github-app-repository-access.md` for read-only, installation-scoped repository and commit access.
+- Removed the OAuth-token repository listing helper, repository access panel, and GitHub smoke script because GitHub OAuth Apps do not offer private repository read-only access.
+- Updated roadmap, architecture, and technical source context to reflect GitHub App ownership of repository access.

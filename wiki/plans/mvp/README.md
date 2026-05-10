@@ -32,7 +32,7 @@ Solo developers building in public who want their shipping activity to become au
 
 ## Stage Sequence
 
-1. `stage-01-foundation.md` - identity, flat-file data, S3 artifact storage, GitHub OAuth, and app shell.
+1. `stage-01-foundation.md` - identity, flat-file data, S3 artifact storage, GitHub OAuth login, GitHub App repository access, and app shell.
 2. `stage-02-projects-and-live-sessions.md` - profiles, projects, live sessions, commit selection, realtime timeline.
 3. `stage-03-ai-recap-and-public-publishing.md` - AI generation, editable recap, public page, copy/export.
 4. `stage-04-mvp-hardening.md` - UX polish, validation, privacy, observability, launch readiness.

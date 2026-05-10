@@ -11,8 +11,7 @@
     "lint": "eslint .",
     "check": "pnpm lint && pnpm build",
     "smoke:data": "tsx scripts/smoke-flat-file-db.mjs",
-    "smoke:profiles": "tsx scripts/smoke-profiles.mjs",
-    "smoke:github": "tsx scripts/smoke-github-repositories.mjs"
+    "smoke:profiles": "tsx scripts/smoke-profiles.mjs"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1045.0",

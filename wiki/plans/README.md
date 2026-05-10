@@ -29,7 +29,7 @@ Fast-path exception: for small, local, reversible fixes that do not change produ
 
 ## Plan Sequence
 
-1. `mvp/stage-01-foundation.md` - identity, flat-file data, S3 artifact storage, GitHub OAuth, and app shell.
+1. `mvp/stage-01-foundation.md` - identity, flat-file data, S3 artifact storage, GitHub OAuth login, GitHub App repository access, and app shell.
 2. `mvp/stage-02-projects-and-live-sessions.md` - profiles, projects, live sessions, commit selection, realtime timeline.
 3. `mvp/stage-03-ai-recap-and-public-publishing.md` - AI generation, editable recap, public page, copy/export.
 4. `mvp/stage-04-mvp-hardening.md` - UX polish, validation, privacy, launch readiness.

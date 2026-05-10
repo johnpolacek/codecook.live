@@ -5,7 +5,7 @@
 - Status: completed
 - Completed: 2026-05-10
 - Result: flat-file-backed creator profile records, Clerk user mapping, onboarding/update form, and validation smoke checks are in place.
-- Follow-up: execute `04-github-oauth-repository-access.md`.
+- Follow-up: execute `04-github-oauth-login.md`.
 - Blockers: full browser sign-in/profile submission verification requires interactive Clerk sign-in.
 
 ## Goal

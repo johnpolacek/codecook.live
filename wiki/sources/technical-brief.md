@@ -2,10 +2,10 @@
 
 ## Status
 
-- Last reviewed: 2026-05-09
-- Evidence basis: repository inspection, dependency upgrade validation, Supabase removal, legacy app cruft removal, and Clerk auth foundation implementation
+- Last reviewed: 2026-05-10
+- Evidence basis: repository inspection, dependency upgrade validation, Supabase removal, legacy app cruft removal, Clerk auth foundation implementation, and GitHub App repository-access planning correction
 - Confidence: high for current repo shape, medium for future integration direction
-- Known gaps: production environment, real Clerk keys, S3-compatible storage credentials, GitHub OAuth app, CI, deployment provider, AI provider key, and required secrets are unknown.
+- Known gaps: production environment, real Clerk keys, S3-compatible storage credentials, GitHub OAuth app for sign-in, GitHub App credentials for repository access, CI, deployment provider, AI provider key, and required secrets are unknown.
 
 ## Stack
 
@@ -13,7 +13,7 @@
 - Styling: Tailwind CSS 4, shadcn/Radix-style primitives, `lucide-react`, Heroicons, and local components.
 - Data/auth/storage: Clerk SDK and protected-route middleware are configured for auth. Flat-file JSON is the MVP database for mutable app state. S3-compatible storage is planned for immutable artifacts.
 - AI: not currently configured in code. Future writing assistance should be added after commit/session data contracts exist.
-- Integrations: Clerk is active in code. MVP integrations still to add are S3-compatible storage credentials, GitHub OAuth/API, and AI writing. Direct publish channels are post-MVP.
+- Integrations: Clerk is active in code. MVP integrations still to add are S3-compatible storage credentials, GitHub OAuth sign-in verification, GitHub App repository access, and AI writing. Direct publish channels are post-MVP.
 - Post-MVP video rendering is unchosen; automatic shorts must evaluate Remotion, Hyperframe, or a renderer adapter before implementation.
 - Package manager: `pnpm`, inferred from `pnpm-lock.yaml` and scripts.
 
