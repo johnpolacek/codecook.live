@@ -110,6 +110,7 @@ This unit is complete when a signed-in creator can install the GitHub App, selec
 - Added `lib/server/repository-connections.ts` for flat-file storage of the current user's GitHub App installation.
 - Added `/app/github/setup` to capture GitHub's installation redirect and save the installation ID.
 - Added repository connection UI on `/app` and `/app/projects`.
+- Added an all-repositories installation notice with a link to manage the GitHub installation.
 - Added `GITHUB_APP_ID`, `GITHUB_APP_SLUG`, and `GITHUB_APP_PRIVATE_KEY_BASE64` to `.env.example`.
 - Added `pnpm smoke:github-app`.
 

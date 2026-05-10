@@ -20,6 +20,7 @@ export type GitHubAppRepository = {
 
 type GitHubInstallation = {
   id: number
+  html_url?: string
   account?: {
     login?: string
     type?: string

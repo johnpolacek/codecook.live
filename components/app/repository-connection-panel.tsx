@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { CheckCircle2, FolderGit2 } from "lucide-react"
+import { CheckCircle2, ExternalLink, FolderGit2 } from "lucide-react"
 
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -14,6 +14,8 @@ type RepositoryConnectionPanelProps = {
 export default function RepositoryConnectionPanel({ state }: RepositoryConnectionPanelProps) {
   const installUrl = getGitHubAppInstallUrl()
   const isConnected = state.status === "connected"
+  const hasAllRepositoryAccess = isConnected && state.connection.repositorySelection === "all"
+  const settingsUrl = isConnected ? state.connection.settingsUrl : ""
 
   return (
     <Card className="rounded-lg shadow-none">
@@ -27,6 +29,22 @@ export default function RepositoryConnectionPanel({ state }: RepositoryConnectio
       <CardContent className="space-y-4">
         {isConnected ? (
           <div className="space-y-3">
+            {hasAllRepositoryAccess ? (
+              <div className="rounded-md border border-amber-500/40 bg-amber-500/10 p-4 text-sm">
+                <p className="font-medium">CodeCook can read all repositories in this GitHub installation.</p>
+                <p className="mt-1 text-muted-foreground">
+                  You can narrow access in GitHub to only the repositories you want to use with CodeCook.
+                </p>
+                {settingsUrl ? (
+                  <Button asChild variant="outline" size="sm" className="mt-3">
+                    <Link href={settingsUrl}>
+                      Manage GitHub installation
+                      <ExternalLink />
+                    </Link>
+                  </Button>
+                ) : null}
+              </div>
+            ) : null}
             {state.repositories.slice(0, 6).map((repository) => (
               <div key={repository.id} className="flex items-center justify-between gap-4 rounded-md border p-4">
                 <div>

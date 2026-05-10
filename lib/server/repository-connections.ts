@@ -11,6 +11,7 @@ export type RepositoryConnection = JsonRecord & {
   accountLogin: string
   accountType: string
   repositorySelection: string
+  settingsUrl: string
   createdAt: string
   updatedAt: string
 }
@@ -73,6 +74,7 @@ export async function saveCurrentRepositoryConnection(installationId: number) {
       accountLogin: installation.account?.login || "",
       accountType: installation.account?.type || "",
       repositorySelection: installation.repository_selection || "",
+      settingsUrl: installation.html_url || "",
       createdAt: existingConnection?.createdAt || now,
       updatedAt: now,
     }

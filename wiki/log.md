@@ -175,6 +175,7 @@ Log bootstrap/import events, planning direction changes, codebase sync summaries
 - Added GitHub App config/JWT/installation-token helpers and installation repository listing.
 - Added flat-file repository connection storage keyed to the Clerk user.
 - Added `/app/github/setup` to capture GitHub App installation redirects and `/app` plus `/app/projects` repository connection UI.
+- Added UI handling for installations that grant all-repositories access, including a GitHub installation management link when available.
 - Added manual setup notes for local/dev and production GitHub Apps with Contents read-only permissions.
 - Validation passed: `pnpm smoke:github-app` and `pnpm check`.
 - Live GitHub App installation verification remains manual until app credentials are configured.
