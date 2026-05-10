@@ -165,5 +165,6 @@ Log bootstrap/import events, planning direction changes, codebase sync summaries
 - Added authenticated app navigation, dashboard, projects route, and profile route.
 - Added customer-facing empty states for profile setup, project setup, and future recaps without exposing implementation details.
 - Updated the landing route so signed-in users are redirected to `/app` instead of seeing marketing content.
+- Added creator profile defaults from available GitHub/Google OAuth identity data, then Clerk user fields.
 - Validation passed: `pnpm check`, public `/` route smoke check, and signed-out Clerk redirect checks for `/app` and `/app/projects`.
 - Interactive signed-in route verification remains deferred until a Clerk browser session is available.

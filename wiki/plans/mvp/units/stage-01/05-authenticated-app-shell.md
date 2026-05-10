@@ -54,6 +54,7 @@ This unit is complete when authenticated users have a coherent workspace shell a
 - Added `/app/projects` with a project empty state and profile guard.
 - Updated `/app` to route incomplete users to creator setup content and complete users to a dashboard with next actions.
 - Updated `/` to redirect signed-in users into `/app` instead of showing marketing content.
+- Prefilled new creator profile fields from available GitHub/Google OAuth identity data, then Clerk user fields.
 - Kept repository connection as a customer-facing next step without exposing implementation details.
 
 ## Verification Result

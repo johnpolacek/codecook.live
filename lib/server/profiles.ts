@@ -38,6 +38,11 @@ export type ProfileInput = {
   displayName: string
 }
 
+export type ProfileDefaults = {
+  displayName: string
+  username: string
+}
+
 export async function getCurrentProfile() {
   const user = await currentUser()
 
@@ -46,6 +51,39 @@ export async function getCurrentProfile() {
   }
 
   return getProfileByClerkUserId(user.id)
+}
+
+export async function getCurrentProfileDefaults(): Promise<ProfileDefaults> {
+  const user = await currentUser()
+
+  if (!user) {
+    return {
+      displayName: "",
+      username: "",
+    }
+  }
+
+  const externalAccount = getPreferredExternalAccount(user.externalAccounts)
+  const displayName = getFirstPresentString(
+    getExternalAccountFullName(externalAccount),
+    user.fullName,
+    getUserFullName(user.firstName, user.lastName),
+    user.username,
+    user.primaryEmailAddress?.emailAddress,
+    user.emailAddresses[0]?.emailAddress,
+  )
+  const username = getFirstPresentString(
+    externalAccount?.username,
+    user.username,
+    getEmailLocalPart(user.primaryEmailAddress?.emailAddress),
+    getEmailLocalPart(user.emailAddresses[0]?.emailAddress),
+    displayName,
+  )
+
+  return {
+    displayName: displayName || "",
+    username: username ? toSlug(username) : "",
+  }
 }
 
 export async function getProfileByClerkUserId(clerkUserId: string) {
@@ -111,6 +149,49 @@ function normalizeDisplayName(displayName: string) {
   }
 
   return normalized
+}
+
+type ExternalAccountLike = {
+  provider?: string | null
+  username?: string | null
+  emailAddress?: string | null
+  firstName?: string | null
+  lastName?: string | null
+  name?: string | null
+}
+
+function getPreferredExternalAccount(externalAccounts: ExternalAccountLike[]) {
+  return (
+    externalAccounts.find((account) => account.provider === "oauth_github") ||
+    externalAccounts.find((account) => account.provider === "oauth_google") ||
+    externalAccounts[0] ||
+    null
+  )
+}
+
+function getExternalAccountFullName(externalAccount: ExternalAccountLike | null) {
+  if (!externalAccount) {
+    return ""
+  }
+
+  return getFirstPresentString(
+    externalAccount.name,
+    getUserFullName(externalAccount.firstName, externalAccount.lastName),
+    externalAccount.username,
+    externalAccount.emailAddress,
+  )
+}
+
+function getUserFullName(firstName?: string | null, lastName?: string | null) {
+  return [firstName, lastName].filter(Boolean).join(" ")
+}
+
+function getEmailLocalPart(emailAddress?: string | null) {
+  return emailAddress?.split("@")[0] || ""
+}
+
+function getFirstPresentString(...values: Array<string | null | undefined>) {
+  return values.map((value) => value?.trim() || "").find(Boolean) || ""
 }
 
 function normalizeUsername(username: string) {

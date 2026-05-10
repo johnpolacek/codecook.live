@@ -5,10 +5,11 @@ import ProfileSetupPanel from "@/components/app/profile-setup-panel"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { getCurrentProfile } from "@/lib/server/profiles"
+import { getCurrentProfile, getCurrentProfileDefaults } from "@/lib/server/profiles"
 
 export default async function AppPage() {
   const profile = await getCurrentProfile()
+  const profileDefaults = profile ? null : await getCurrentProfileDefaults()
 
   return (
     <div className="space-y-8">
@@ -79,7 +80,10 @@ export default async function AppPage() {
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">Creator Setup</p>
             <h1 className="mt-3 text-3xl font-extrabold sm:text-4xl">Create your CodeCook profile.</h1>
           </div>
-          <ProfileSetupPanel />
+          <ProfileSetupPanel
+            defaultDisplayName={profileDefaults?.displayName}
+            defaultUsername={profileDefaults?.username}
+          />
         </section>
       )}
     </div>
