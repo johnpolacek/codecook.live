@@ -1,8 +1,8 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import Link from "next/link"
 import { ArrowRight } from "lucide-react"
+import { SignUpButton } from "@clerk/nextjs"
 
 export default function Hero() {
   return (
@@ -13,11 +13,11 @@ export default function Hero() {
           CodeCook.live is your platform for growing your audience while you ship.
         </p>
         <div className="mt-10 flex justify-center">
-          <Button asChild className="h-auto px-8 py-4 text-lg">
-            <Link href="#product">
-              See the Product <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
+          <SignUpButton mode="modal">
+            <Button className="h-auto px-8 py-4 text-lg">
+              Sign Up <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </SignUpButton>
         </div>
       </div>
     </section>
