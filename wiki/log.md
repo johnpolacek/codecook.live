@@ -189,4 +189,5 @@ Log bootstrap/import events, planning direction changes, codebase sync summaries
 - Updated Stage 02 direction so connected repositories automatically appear as CodeCook projects.
 - Added repository-backed project cards on `/app` and `/app/projects`.
 - Reordered `/app/projects` so project cards are primary and repository connection management is secondary.
+- Removed redundant project-page eyebrow text and connected-state message noise.
 - Validation passed: `pnpm smoke:github-app` and `pnpm check`.
