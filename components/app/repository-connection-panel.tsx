@@ -29,7 +29,7 @@ export default function RepositoryConnectionPanel({ state, setupMessage }: Repos
         <CardDescription>{state.message}</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
-        {setupMessage ? (
+        {setupMessage && setupMessage !== state.message ? (
           <div className="rounded-md border border-amber-500/40 bg-amber-500/10 p-4 text-sm">{setupMessage}</div>
         ) : null}
         {hasAllRepositoryAccess ? (

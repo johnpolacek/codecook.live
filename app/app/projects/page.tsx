@@ -40,7 +40,7 @@ export default async function ProjectsPage({ searchParams }: ProjectsPageProps) 
             <FolderGit2 className="size-5" />
           </div>
           <CardTitle className="text-xl">No projects yet</CardTitle>
-          <CardDescription>Repository connection is the next setup step before projects can be created.</CardDescription>
+          <CardDescription>Choose a connected repository to create your first CodeCook project.</CardDescription>
         </CardHeader>
         <CardContent>
           <Button asChild>
