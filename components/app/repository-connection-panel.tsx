@@ -9,9 +9,10 @@ import { type RepositoryConnectionState } from "@/lib/server/repository-connecti
 
 type RepositoryConnectionPanelProps = {
   state: RepositoryConnectionState
+  setupMessage?: string
 }
 
-export default function RepositoryConnectionPanel({ state }: RepositoryConnectionPanelProps) {
+export default function RepositoryConnectionPanel({ state, setupMessage }: RepositoryConnectionPanelProps) {
   const installUrl = getGitHubAppInstallUrl()
   const isConnected = state.status === "connected"
   const connection = state.status === "connected" || state.status === "error" ? state.connection : null
@@ -28,6 +29,9 @@ export default function RepositoryConnectionPanel({ state }: RepositoryConnectio
         <CardDescription>{state.message}</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
+        {setupMessage ? (
+          <div className="rounded-md border border-amber-500/40 bg-amber-500/10 p-4 text-sm">{setupMessage}</div>
+        ) : null}
         {hasAllRepositoryAccess ? (
           <div className="rounded-md border border-amber-500/40 bg-amber-500/10 p-4 text-sm">
             <p className="font-medium">CodeCook can read all repositories in this GitHub installation.</p>

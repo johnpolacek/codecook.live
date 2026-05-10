@@ -1,4 +1,4 @@
-import { createSign } from "node:crypto"
+import { createPrivateKey, createSign } from "node:crypto"
 
 export type GitHubAppConfig = {
   appId: string
@@ -51,7 +51,7 @@ type GitHubRepositoriesResponse = {
   repositories: GitHubRepositoryResponse[]
 }
 
-const GITHUB_API_VERSION = "2026-03-10"
+const GITHUB_API_VERSION = "2022-11-28"
 
 export function getGitHubAppConfig(): GitHubAppConfig | null {
   const appId = process.env.GITHUB_APP_ID?.trim()
@@ -139,7 +139,17 @@ function requireGitHubAppConfig() {
     throw new Error("GitHub App is not configured.")
   }
 
+  assertValidGitHubPrivateKey(config.privateKey)
+
   return config
+}
+
+function assertValidGitHubPrivateKey(privateKey: string) {
+  try {
+    createPrivateKey({ key: privateKey, format: "pem" })
+  } catch {
+    throw new Error("GitHub App private key is invalid or incomplete.")
+  }
 }
 
 async function createInstallationAccessToken(installationId: number, config: GitHubAppConfig) {

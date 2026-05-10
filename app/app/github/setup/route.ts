@@ -12,7 +12,11 @@ export async function GET(request: NextRequest) {
   try {
     await saveCurrentRepositoryConnection(installationId)
     return NextResponse.redirect(new URL("/app/projects?github=connected", request.url))
-  } catch {
-    return NextResponse.redirect(new URL("/app/projects?github=connection-error", request.url))
+  } catch (error) {
+    console.error("GitHub App setup failed", error)
+
+    const reason = error instanceof Error && error.message.includes("private key") ? "invalid-private-key" : "connection-error"
+
+    return NextResponse.redirect(new URL(`/app/projects?github=${reason}`, request.url))
   }
 }
