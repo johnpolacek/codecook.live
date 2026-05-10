@@ -4,9 +4,9 @@
 
 - Status: draft
 - Shape: MVP stage
-- Current unit: Unit 06 - GitHub App Repository Access
-- Next action: implement GitHub App repository access
-- Blockers: interactive Clerk sign-in for full browser verification
+- Current unit: complete
+- Next action: start Stage 02 project creation
+- Blockers: manual GitHub App setup and live installation verification
 - Validation: `pnpm lint`, `pnpm build`, auth sign-in smoke checks, local data smoke checks, S3 config checks
 
 ## Goal

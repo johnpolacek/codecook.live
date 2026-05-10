@@ -2,9 +2,11 @@ import Link from "next/link"
 import { redirect } from "next/navigation"
 import { FolderGit2 } from "lucide-react"
 
+import RepositoryConnectionPanel from "@/components/app/repository-connection-panel"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { getCurrentProfile } from "@/lib/server/profiles"
+import { getCurrentRepositoryConnectionState } from "@/lib/server/repository-connections"
 
 export default async function ProjectsPage() {
   const profile = await getCurrentProfile()
@@ -12,6 +14,7 @@ export default async function ProjectsPage() {
   if (!profile) {
     redirect("/app/profile")
   }
+  const repositoryConnectionState = await getCurrentRepositoryConnectionState(true)
 
   return (
     <div className="space-y-8">
@@ -22,6 +25,7 @@ export default async function ProjectsPage() {
           Create a project from a repository, then turn active work into live sessions and shareable recaps.
         </p>
       </div>
+      <RepositoryConnectionPanel state={repositoryConnectionState} />
       <Card className="rounded-lg shadow-none">
         <CardHeader>
           <div className="flex size-10 items-center justify-center rounded-md bg-secondary">

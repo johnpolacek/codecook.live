@@ -168,3 +168,13 @@ Log bootstrap/import events, planning direction changes, codebase sync summaries
 - Added creator profile defaults from available GitHub/Google OAuth identity data, then Clerk user fields.
 - Validation passed: `pnpm check`, public `/` route smoke check, and signed-out Clerk redirect checks for `/app` and `/app/projects`.
 - Interactive signed-in route verification remains deferred until a Clerk browser session is available.
+
+## 2026-05-10 implementation | GitHub App repository access
+
+- Completed `wiki/plans/mvp/units/stage-01/06-github-app-repository-access.md`.
+- Added GitHub App config/JWT/installation-token helpers and installation repository listing.
+- Added flat-file repository connection storage keyed to the Clerk user.
+- Added `/app/github/setup` to capture GitHub App installation redirects and `/app` plus `/app/projects` repository connection UI.
+- Added manual setup notes for local/dev and production GitHub Apps with Contents read-only permissions.
+- Validation passed: `pnpm smoke:github-app` and `pnpm check`.
+- Live GitHub App installation verification remains manual until app credentials are configured.

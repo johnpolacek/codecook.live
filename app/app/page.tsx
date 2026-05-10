@@ -1,15 +1,18 @@
 import Link from "next/link"
-import { ArrowRight, FolderGit2, Sparkles, UserRound } from "lucide-react"
+import { ArrowRight, Sparkles, UserRound } from "lucide-react"
 
 import ProfileSetupPanel from "@/components/app/profile-setup-panel"
+import RepositoryConnectionPanel from "@/components/app/repository-connection-panel"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { getCurrentProfile, getCurrentProfileDefaults } from "@/lib/server/profiles"
+import { getCurrentRepositoryConnectionState } from "@/lib/server/repository-connections"
 
 export default async function AppPage() {
   const profile = await getCurrentProfile()
   const profileDefaults = profile ? null : await getCurrentProfileDefaults()
+  const repositoryConnectionState = await getCurrentRepositoryConnectionState(Boolean(profile))
 
   return (
     <div className="space-y-8">
@@ -39,28 +42,9 @@ export default async function AppPage() {
                 </Button>
               </CardContent>
             </Card>
-            <Card className="rounded-lg shadow-none md:col-span-2">
-              <CardHeader>
-                <div className="flex size-10 items-center justify-center rounded-md bg-secondary">
-                  <FolderGit2 className="size-5" />
-                </div>
-                <CardTitle>Connect your first repository</CardTitle>
-                <CardDescription>
-                  Projects start from repositories. You will choose exactly which repositories CodeCook can read.
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="flex flex-wrap gap-3">
-                <Button asChild>
-                  <Link href="/app/projects">
-                    View projects
-                    <ArrowRight />
-                  </Link>
-                </Button>
-                <Button asChild variant="outline">
-                  <Link href="/app/profile">Account details</Link>
-                </Button>
-              </CardContent>
-            </Card>
+            <div className="md:col-span-2">
+              <RepositoryConnectionPanel state={repositoryConnectionState} />
+            </div>
           </section>
           <Card className="rounded-lg shadow-none">
             <CardHeader>
@@ -72,6 +56,14 @@ export default async function AppPage() {
                 Once you create a project and start a session, this dashboard will show active work and recent publish-ready updates.
               </CardDescription>
             </CardHeader>
+            <CardContent>
+              <Button asChild variant="outline">
+                <Link href="/app/projects">
+                  View projects
+                  <ArrowRight />
+                </Link>
+              </Button>
+            </CardContent>
           </Card>
         </>
       ) : (

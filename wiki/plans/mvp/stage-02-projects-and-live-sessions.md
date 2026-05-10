@@ -4,9 +4,9 @@
 
 - Status: draft
 - Shape: MVP stage
-- Current unit: none
-- Next action: start after Stage 01 completion
-- Blockers: authenticated user/profile model, GitHub repository access, flat-file data foundation
+- Current unit: Unit 01 - Project Create From Repository
+- Next action: implement project creation from a connected GitHub repository
+- Blockers: manual GitHub App setup and live installation verification
 - Validation: `pnpm lint`, `pnpm build`, flat-file data checks, browser workflow checks for projects and sessions
 
 ## Goal
